@@ -104,10 +104,49 @@ nav.bd-links .current {
   background: var(--sp-bg) !important;
 }
 
-/* --- Layout: fijar anchos de columnas ----------------------------------------- */
-:root {
-  --pst-sidebar-primary-width:   270px;
-  --pst-sidebar-secondary-width: 200px;
+/* --- Layout: corregir columnas ------------------------------------------------- */
+
+/* sphinx-book-theme rompe el layout al poner flex-grow:0 en bd-main.
+   Lo restauramos a 1 para que el contenido llene el espacio disponible. */
+.bd-main {
+  flex-grow: 1 !important;
+  min-width: 0 !important;
+}
+
+/* Ocultar sidebar secundaria (TOC derecha): no la necesitamos para este curso
+   y su presencia reduce drásticamente el ancho del artículo principal. */
+.bd-sidebar-secondary {
+  display: none !important;
+}
+
+/* Con la sidebar secundaria oculta, el contenido puede usar todo el espacio */
+.bd-main .bd-content {
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+.bd-main .bd-content .bd-article-container {
+  max-width: 52rem !important;   /* anchura cómoda de lectura */
+  width: 100% !important;
+  overflow-x: auto !important;   /* restaurar overflow que sbt quita */
+}
+
+/* Sidebar primaria: ancho fijo legible */
+@media (min-width: 992px) {
+  .bd-sidebar-primary {
+    flex-basis: 260px !important;
+    min-width: 260px !important;
+    max-width: 260px !important;
+    flex-shrink: 0 !important;
+  }
+}
+
+/* Tablas: scroll horizontal en lugar de romper el layout */
+article.bd-article table,
+.bd-content table {
+  display: block !important;
+  overflow-x: auto !important;
+  max-width: 100% !important;
 }
 
 /* --- Encabezados -------------------------------------------------------------- */
