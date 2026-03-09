@@ -1,0 +1,752 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="es" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>🐍 Módulo 1 — Introducción a Python &#8212; Ciencia con Python</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Haz clic para mostrar';</script>
+    <script>let toggleHintHide = 'Haz clic para ocultar';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'modulos/01_introduccion/index';</script>
+    <link rel="index" title="Índice" href="../../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../../search.html" />
+    <link rel="next" title="🔬 Ejemplos — Módulo 1" href="ejemplos.html" />
+    <link rel="prev" title="🔧 Configuración" href="../00_setup/index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="es"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Saltar al contenido principal</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Volver arriba</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Advertencia de versión"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Ciencia con Python</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Ciencia con Python 🚀
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Antes de empezar</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../00_setup/index.html">🔧 Configuración</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Módulo 1 · Introducción a Python</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">📖 Teoría</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ejemplos.html">🔬 Ejemplos — Módulo 1</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="ejercicios.html">✏️ Ejercicios — Módulo 1</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="extras.html">🏆 Retos Extra — Módulo 1</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Descarga esta pagina">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/modulos/01_introduccion/index.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Descargar archivo fuente"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Imprimir en PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Modo de pantalla completa"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="claro/oscuro" aria-label="claro/oscuro" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>🐍 Módulo 1 — Introducción a Python</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contenido </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#la-funcion-print">1. La función <code class="docutils literal notranslate"><span class="pre">print()</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#probalo-vos-mismo-try-it-yourself">Probalo vos mismo / Try it yourself</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#print-con-varios-valores"><code class="docutils literal notranslate"><span class="pre">print()</span></code> con varios valores</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">2. Variables</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reglas-para-nombrar-variables">Reglas para nombrar variables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rules-for-naming-variables">Rules for naming variables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tipos-de-datos-data-types">Tipos de datos / Data Types</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operaciones-aritmeticas-arithmetic-operations">3. Operaciones Aritméticas / Arithmetic Operations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#orden-de-operaciones-order-of-operations">Orden de operaciones / Order of Operations</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#juntando-todo-putting-it-all-together">Juntando todo / Putting It All Together</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="modulo-1-introduccion-a-python">
+<h1>🐍 Módulo 1 — Introducción a Python<a class="headerlink" href="#modulo-1-introduccion-a-python" title="Permalink to this heading">#</a></h1>
+<div class="lang-es">
+<p>En este módulo vas a aprender los tres bloques fundamentales de cualquier programa Python:
+<strong><code class="docutils literal notranslate"><span class="pre">print()</span></code></strong>, <strong>variables</strong> y <strong>operaciones aritméticas</strong>.
+Con solo estos tres elementos ya podés resolver problemas científicos reales.</p>
+</div>
+<div class="lang-en">
+<p>In this module you’ll learn the three fundamental building blocks of any Python program:
+<strong><code class="docutils literal notranslate"><span class="pre">print()</span></code></strong>, <strong>variables</strong>, and <strong>arithmetic operations</strong>.
+With just these three elements you can already solve real scientific problems.</p>
+</div>
+<hr class="docutils" />
+<section id="la-funcion-print">
+<h2>1. La función <code class="docutils literal notranslate"><span class="pre">print()</span></code><a class="headerlink" href="#la-funcion-print" title="Permalink to this heading">#</a></h2>
+<div class="lang-es">
+<p><code class="docutils literal notranslate"><span class="pre">print()</span></code> es la forma más básica de mostrar información en pantalla.
+Pensá en <code class="docutils literal notranslate"><span class="pre">print</span></code> como si le dijeras a la computadora: <strong>«mostrá esto»</strong>.</p>
+</div>
+<div class="lang-en">
+<p><code class="docutils literal notranslate"><span class="pre">print()</span></code> is the most basic way to display information on screen.
+Think of <code class="docutils literal notranslate"><span class="pre">print</span></code> as telling the computer: <strong>«show this»</strong>.</p>
+</div>
+<section id="probalo-vos-mismo-try-it-yourself">
+<h3>Probalo vos mismo / Try it yourself<a class="headerlink" href="#probalo-vos-mismo-try-it-yourself" title="Permalink to this heading">#</a></h3>
+<div class="lang-es">Hacé clic en **▶ Ejecutar** para ver el resultado:</div>
+<div class="lang-en">Click **▶ Ejecutar** to see the result:</div>
+<div class="py-interactive" data-mode="browser">print("¡Hola, universo!")
+print("Python es genial")
+print(2025)</div>
+<div class="lang-es">
+<p>Observá que podés imprimir <strong>texto</strong> (entre comillas) y también <strong>números</strong> (sin comillas).</p>
+</div>
+<div class="lang-en">
+<p>Notice that you can print <strong>text</strong> (with quotes) and also <strong>numbers</strong> (without quotes).</p>
+</div>
+</section>
+<section id="print-con-varios-valores">
+<h3><code class="docutils literal notranslate"><span class="pre">print()</span></code> con varios valores<a class="headerlink" href="#print-con-varios-valores" title="Permalink to this heading">#</a></h3>
+<div class="lang-es">
+<p>Podés pasarle varios valores a <code class="docutils literal notranslate"><span class="pre">print()</span></code> separados por comas y los mostrará juntos con un espacio entre ellos:</p>
+</div>
+<div class="lang-en">
+<p>You can pass several values to <code class="docutils literal notranslate"><span class="pre">print()</span></code> separated by commas and it will display them together with a space between them:</p>
+</div>
+<div class="py-interactive" data-mode="browser">print("La velocidad de la luz es", 300000, "km/s")</div>
+<div class="admonition tip">
+<p class="admonition-title">Truco</p>
+<p><span class="lang-es">El texto que va entre comillas se llama <strong>cadena de texto</strong> o <em>string</em>. Podés usar comillas simples <code class="docutils literal notranslate"><span class="pre">'hola'</span></code> o dobles <code class="docutils literal notranslate"><span class="pre">&quot;hola&quot;</span></code>, ambas funcionan igual.</span>
+<span class="lang-en">Text that goes between quotes is called a <strong>string</strong>. You can use single quotes <code class="docutils literal notranslate"><span class="pre">'hello'</span></code> or double quotes <code class="docutils literal notranslate"><span class="pre">&quot;hello&quot;</span></code>, both work the same way.</span></p>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="variables">
+<h2>2. Variables<a class="headerlink" href="#variables" title="Permalink to this heading">#</a></h2>
+<div class="lang-es">
+<p>Una variable es como una <strong>caja con etiqueta</strong>: le ponés un nombre y guardás un valor adentro.
+Cuando después usás ese nombre, Python sabe que tiene que buscar el valor en esa caja.</p>
+</div>
+<div class="lang-en">
+<p>A variable is like a <strong>labeled box</strong>: you give it a name and store a value inside.
+When you use that name later, Python knows to look for the value in that box.</p>
+</div>
+<div class="py-interactive" data-mode="browser">planeta = "Marte"
+distancia_km = 225000000
+temperatura_C = -63
+<p>print(«Planeta:», planeta)
+print(«Distancia al Sol:», distancia_km, «km»)
+print(«Temperatura promedio:», temperatura_C, «°C»)</div></p>
+<div class="lang-es">
+<section id="reglas-para-nombrar-variables">
+<h3>Reglas para nombrar variables<a class="headerlink" href="#reglas-para-nombrar-variables" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Los nombres solo pueden tener <strong>letras, números y guiones bajos</strong> (<code class="docutils literal notranslate"><span class="pre">_</span></code>)</p></li>
+<li><p>No pueden <strong>empezar con un número</strong>: <code class="docutils literal notranslate"><span class="pre">3planeta</span></code> ❌  →  <code class="docutils literal notranslate"><span class="pre">planeta3</span></code> ✅</p></li>
+<li><p>No pueden tener <strong>espacios</strong>: usa <code class="docutils literal notranslate"><span class="pre">_</span></code> en su lugar: <code class="docutils literal notranslate"><span class="pre">velocidad_luz</span></code> ✅</p></li>
+<li><p>Son <strong>sensibles a mayúsculas</strong>: <code class="docutils literal notranslate"><span class="pre">Planeta</span></code> y <code class="docutils literal notranslate"><span class="pre">planeta</span></code> son variables diferentes</p></li>
+</ul>
+</div>
+<div class="lang-en">
+</section>
+<section id="rules-for-naming-variables">
+<h3>Rules for naming variables<a class="headerlink" href="#rules-for-naming-variables" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Names can only contain <strong>letters, numbers, and underscores</strong> (<code class="docutils literal notranslate"><span class="pre">_</span></code>)</p></li>
+<li><p>They cannot <strong>start with a number</strong>: <code class="docutils literal notranslate"><span class="pre">3planet</span></code> ❌  →  <code class="docutils literal notranslate"><span class="pre">planet3</span></code> ✅</p></li>
+<li><p>They cannot contain <strong>spaces</strong>: use <code class="docutils literal notranslate"><span class="pre">_</span></code> instead: <code class="docutils literal notranslate"><span class="pre">speed_of_light</span></code> ✅</p></li>
+<li><p>They are <strong>case-sensitive</strong>: <code class="docutils literal notranslate"><span class="pre">Planet</span></code> and <code class="docutils literal notranslate"><span class="pre">planet</span></code> are different variables</p></li>
+</ul>
+</div>
+</section>
+<section id="tipos-de-datos-data-types">
+<h3>Tipos de datos / Data Types<a class="headerlink" href="#tipos-de-datos-data-types" title="Permalink to this heading">#</a></h3>
+<div class="lang-es">
+<p>En Python existen diferentes tipos de valores. Los más importantes al comenzar son:</p>
+</div>
+<div class="lang-en">
+<p>In Python there are different types of values. The most important ones to start with are:</p>
+</div>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Tipo / Type</p></th>
+<th class="head"><p><span class="lang-es">Descripción</span><span class="lang-en">Description</span></p></th>
+<th class="head"><p><span class="lang-es">Ejemplo</span><span class="lang-en">Example</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">int</span></code></p></td>
+<td><p><span class="lang-es">Número entero</span><span class="lang-en">Whole number</span></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">42</span></code>, <code class="docutils literal notranslate"><span class="pre">-7</span></code>, <code class="docutils literal notranslate"><span class="pre">2025</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">float</span></code></p></td>
+<td><p><span class="lang-es">Número decimal</span><span class="lang-en">Decimal number</span></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">3.14</span></code>, <code class="docutils literal notranslate"><span class="pre">9.8</span></code>, <code class="docutils literal notranslate"><span class="pre">-273.15</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">str</span></code></p></td>
+<td><p><span class="lang-es">Texto (string)</span><span class="lang-en">Text (string)</span></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;Tierra&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">'Júpiter'</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="py-interactive" data-mode="browser"># Ejemplos de los tres tipos
+año = 2025              # int
+gravedad = 9.8          # float (m/s²)
+nombre_planeta = "Tierra"  # str
+<p>print(nombre_planeta, «— Gravedad:», gravedad, «m/s²  — Año:», año)</div></p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p><span class="lang-es">El símbolo <code>#</code> sirve para escribir <strong>comentarios</strong>: texto que Python ignora pero que ayuda a entender el código.</span>
+<span class="lang-en">The <code>#</code> symbol is used to write <strong>comments</strong>: text that Python ignores but helps understand the code.</span></p>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="operaciones-aritmeticas-arithmetic-operations">
+<h2>3. Operaciones Aritméticas / Arithmetic Operations<a class="headerlink" href="#operaciones-aritmeticas-arithmetic-operations" title="Permalink to this heading">#</a></h2>
+<div class="lang-es">
+<p>Python puede hacer cálculos matemáticos directamente. Estas son las operaciones disponibles:</p>
+</div>
+<div class="lang-en">
+<p>Python can perform math calculations directly. Here are the available operations:</p>
+</div>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Operador</p></th>
+<th class="head"><p><span class="lang-es">Operación</span><span class="lang-en">Operation</span></p></th>
+<th class="head"><p><span class="lang-es">Ejemplo</span><span class="lang-en">Example</span></p></th>
+<th class="head"><p><span class="lang-es">Resultado</span><span class="lang-en">Result</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">+</span></code></p></td>
+<td><p><span class="lang-es">Suma</span><span class="lang-en">Addition</span></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">5</span> <span class="pre">+</span> <span class="pre">3</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">8</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-</span></code></p></td>
+<td><p><span class="lang-es">Resta</span><span class="lang-en">Subtraction</span></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">10</span> <span class="pre">-</span> <span class="pre">4</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">6</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">*</span></code></p></td>
+<td><p><span class="lang-es">Multiplicación</span><span class="lang-en">Multiplication</span></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">3</span> <span class="pre">*</span> <span class="pre">7</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">21</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">/</span></code></p></td>
+<td><p><span class="lang-es">División</span><span class="lang-en">Division</span></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">15</span> <span class="pre">/</span> <span class="pre">4</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">3.75</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">//</span></code></p></td>
+<td><p><span class="lang-es">División entera</span><span class="lang-en">Integer division</span></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">15</span> <span class="pre">//</span> <span class="pre">4</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">3</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">%</span></code></p></td>
+<td><p><span class="lang-es">Módulo (resto)</span><span class="lang-en">Modulo (remainder)</span></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">15</span> <span class="pre">%</span> <span class="pre">4</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">3</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">**</span></code></p></td>
+<td><p><span class="lang-es">Potencia</span><span class="lang-en">Exponentiation</span></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">**</span> <span class="pre">8</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">256</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="py-interactive" data-mode="browser"># Python como calculadora
+print(5 + 3)
+print(10 - 4)
+print(3 * 7)
+print(15 / 4)   # División normal → resultado decimal
+print(15 // 4)  # División entera → solo la parte entera
+print(2 ** 10)  # 2 elevado a la 10</div>
+<section id="orden-de-operaciones-order-of-operations">
+<h3>Orden de operaciones / Order of Operations<a class="headerlink" href="#orden-de-operaciones-order-of-operations" title="Permalink to this heading">#</a></h3>
+<div class="lang-es">
+<p>Python sigue el mismo orden que en matemáticas: primero potencias, luego multiplicación y división, y por último suma y resta. Los paréntesis tienen prioridad sobre todo.</p>
+</div>
+<div class="lang-en">
+<p>Python follows the same order as in mathematics: first exponents, then multiplication and division, and finally addition and subtraction. Parentheses take priority over everything.</p>
+</div>
+<div class="py-interactive" data-mode="browser">print(2 + 3 * 4)    # = 14  (primero 3*4=12, luego 2+12)
+print((2 + 3) * 4)  # = 20  (paréntesis primero)
+print(10 / 2 + 3)   # = 8.0
+print(10 / (2 + 3)) # = 2.0</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="juntando-todo-putting-it-all-together">
+<h2>Juntando todo / Putting It All Together<a class="headerlink" href="#juntando-todo-putting-it-all-together" title="Permalink to this heading">#</a></h2>
+<div class="lang-es">
+<p>Ahora usemos <code class="docutils literal notranslate"><span class="pre">print()</span></code>, variables y operaciones para responder una pregunta científica real:
+¿Cuánto tarda la luz en viajar del Sol a la Tierra?</p>
+</div>
+<div class="lang-en">
+<p>Now let’s use <code class="docutils literal notranslate"><span class="pre">print()</span></code>, variables, and operations to answer a real scientific question:
+How long does it take light to travel from the Sun to Earth?</p>
+</div>
+<div class="py-interactive" data-mode="browser"># ¿Cuánto tarda la luz en llegar del Sol a la Tierra?
+<p>velocidad_luz = 300000     # km/s
+distancia_sol_tierra = 150000000  # km</p>
+<p>tiempo_segundos = distancia_sol_tierra / velocidad_luz
+tiempo_minutos = tiempo_segundos / 60</p>
+<p>print(«La luz tarda», tiempo_segundos, «segundos»)
+print(«O lo que es lo mismo:», tiempo_minutos, «minutos»)</div></p>
+<div class="admonition tip">
+<p class="admonition-title">Truco</p>
+<p><span class="lang-es">¡Modificá los valores y ejecutalo de nuevo! Por ejemplo, cambiá la distancia por la de Marte al Sol (228 millones de km) y calculá cuánto tardaría la luz en llegar allá.</span>
+<span class="lang-en">Modify the values and run it again! For example, change the distance to Mars’s distance from the Sun (228 million km) and calculate how long light takes to get there.</span></p>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./modulos/01_introduccion"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../00_setup/index.html"
+       title="página anterior">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">anterior</p>
+        <p class="prev-next-title">🔧 Configuración</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="ejemplos.html"
+       title="siguiente página">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">siguiente</p>
+        <p class="prev-next-title">🔬 Ejemplos — Módulo 1</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contenido
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#la-funcion-print">1. La función <code class="docutils literal notranslate"><span class="pre">print()</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#probalo-vos-mismo-try-it-yourself">Probalo vos mismo / Try it yourself</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#print-con-varios-valores"><code class="docutils literal notranslate"><span class="pre">print()</span></code> con varios valores</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">2. Variables</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reglas-para-nombrar-variables">Reglas para nombrar variables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rules-for-naming-variables">Rules for naming variables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tipos-de-datos-data-types">Tipos de datos / Data Types</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operaciones-aritmeticas-arithmetic-operations">3. Operaciones Aritméticas / Arithmetic Operations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#orden-de-operaciones-order-of-operations">Orden de operaciones / Order of Operations</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#juntando-todo-putting-it-all-together">Juntando todo / Putting It All Together</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Por Tangrama
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
