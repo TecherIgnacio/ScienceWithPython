@@ -31,14 +31,18 @@ Modify the code to print **your name**, your **age**, and your **favorite planet
 
 </div>
 
-<div class="py-interactive" data-mode="browser"># Completá con tus datos
-nombre  = "..."   # Cambiá por tu nombre
-edad    = 0       # Cambiá por tu edad
-planeta = "..."   # Cambiá por tu planeta favorito
+```{code-block} python
+:class: py-cell-browser
+
+# Completá con tus datos
+nombre  = "..."   # Cambia por tu nombre
+edad    = 0       # Cambia por tu edad
+planeta = "..."   # Cambia por tu planeta favorito
 
 print("Hola, me llamo", nombre)
 print("Tengo", edad, "años")
-print("Mi planeta favorito es", planeta)</div>
+print("Mi planeta favorito es", planeta)
+```
 
 ---
 
@@ -61,18 +65,22 @@ that travels 384,400 km (Earth-Moon distance) in 3 days.
 
 </div>
 
-<div class="py-interactive" data-mode="browser">distancia_km = 384400  # km (distancia Tierra-Luna)
-tiempo_dias  = 3       # días
+```{code-block} python
+:class: py-cell-browser
 
-# Primero convertí los días a horas (1 día = 24 horas)
+distancia_km = 384400  # km (distancia Tierra-Luna)
+tiempo_dias  = 3       # dias
+
+# Convertí los días a horas (1 día = 24 horas)
 tiempo_horas = tiempo_dias * 24
 
-# Ahora calculá la velocidad en km/h
+# Calculá la velocidad en km/h
 velocidad = distancia_km / tiempo_horas
 
 print("Distancia:", distancia_km, "km")
 print("Tiempo:", tiempo_horas, "horas")
-print("Velocidad promedio:", velocidad, "km/h")</div>
+print("Velocidad promedio:", velocidad, "km/h")
+```
 
 :::{tip}
 <span class="lang-es">¿Podés modificar el código para calcular también la velocidad en m/s? (1 km = 1000 m, 1 hora = 3600 s)</span>
@@ -87,26 +95,23 @@ print("Velocidad promedio:", velocidad, "km/h")</div>
 
 El área de un círculo es: **A = π × r²**
 
-Calculá el área de:
-1. La Tierra (radio ≈ 6.371 km)
-2. La Luna (radio ≈ 1.737 km)
-
-Y encontrá cuántas veces es más grande la sección transversal de la Tierra que la de la Luna.
+Calculá el área de la Tierra (radio ≈ 6.371 km) y la Luna (radio ≈ 1.737 km),
+y encontrá cuántas veces es más grande la Tierra que la Luna.
 
 </div>
 <div class="lang-en">
 
 The area of a circle is: **A = π × r²**
 
-Calculate the area of:
-1. Earth (radius ≈ 6,371 km)
-2. The Moon (radius ≈ 1,737 km)
-
-And find how many times larger Earth's cross-section is compared to the Moon's.
+Calculate the area of Earth (radius ≈ 6,371 km) and the Moon (radius ≈ 1,737 km),
+and find how many times larger Earth is compared to the Moon.
 
 </div>
 
-<div class="py-interactive" data-mode="browser">pi = 3.14159265
+```{code-block} python
+:class: py-cell-browser
+
+pi = 3.14159265
 
 radio_tierra = 6371   # km
 radio_luna   = 1737   # km
@@ -116,44 +121,41 @@ area_luna   = pi * radio_luna   ** 2
 
 veces = area_tierra / area_luna
 
-print("Área de la sección de la Tierra:", round(area_tierra, 0), "km²")
-print("Área de la sección de la Luna:  ", round(area_luna,   0), "km²")
-print("La Tierra es", round(veces, 1), "veces más grande que la Luna")</div>
+print("Area de la Tierra:", round(area_tierra, 0), "km²")
+print("Area de la Luna:  ", round(area_luna,   0), "km²")
+print("La Tierra es", round(veces, 1), "veces mas grande que la Luna")
+```
 
 ---
 
-## 💻 Ejercicio 4 — Conversión de unidades astronómicas
+## 💻 Ejercicio 4 — Conversión de Unidades Astronómicas
 
 <div class="lang-es">
 
-Una **Unidad Astronómica (UA)** es la distancia promedio de la Tierra al Sol: **149.597.870 km**.
-Es la unidad que se usa para medir distancias dentro del Sistema Solar.
+Una **Unidad Astronómica (UA)** es la distancia promedio de la Tierra al Sol: 149.597.870 km.
 
-Creá un programa en tu PC que:
-1. Defina la distancia de cada planeta al Sol en UA
-2. Convierta cada distancia a kilómetros
-3. Imprima los resultados
+Creá un programa en tu PC que defina las distancias de cada planeta en UA,
+las convierta a km, y las imprima.
 
 </div>
 <div class="lang-en">
 
-An **Astronomical Unit (AU)** is the average distance from Earth to the Sun: **149,597,870 km**.
-It's the unit used to measure distances within the Solar System.
+An **Astronomical Unit (AU)** is the average distance from Earth to the Sun: 149,597,870 km.
 
-Create a program on your PC that:
-1. Defines each planet's distance from the Sun in AU
-2. Converts each distance to kilometers
-3. Prints the results
+Create a program on your PC that defines each planet's distance in AU,
+converts them to km, and prints the results.
 
 </div>
 
-<div class="py-interactive" data-mode="local">
-# Ejercicio 4 — Conversión de Unidades Astronómicas
-# Ejecutá este archivo en tu PC con: python ejercicio4.py
+```{code-block} python
+:class: py-cell-local
 
-UA_en_km = 149597870  # 1 UA en kilómetros
+# Ejercicio 4 — Conversion de Unidades Astronomicas
+# Ejecuta este archivo con: python ejercicio4.py
 
-# Distancias al Sol en Unidades Astronómicas (UA)
+UA_en_km = 149597870  # 1 UA en kilometros
+
+# Distancias al Sol en Unidades Astronomicas
 mercurio_UA = 0.39
 venus_UA    = 0.72
 tierra_UA   = 1.00
@@ -161,7 +163,7 @@ marte_UA    = 1.52
 jupiter_UA  = 5.20
 saturno_UA  = 9.58
 
-# Convertir a kilómetros
+# Convertir a kilometros
 mercurio_km = mercurio_UA * UA_en_km
 venus_km    = venus_UA    * UA_en_km
 tierra_km   = tierra_UA   * UA_en_km
@@ -169,48 +171,40 @@ marte_km    = marte_UA    * UA_en_km
 jupiter_km  = jupiter_UA  * UA_en_km
 saturno_km  = saturno_UA  * UA_en_km
 
-print("Planeta     | UA    | Kilómetros")
-print("-" * 40)
+print("Planeta     | UA    | Kilometros")
+print("-" * 38)
 print("Mercurio    |", mercurio_UA, "|", mercurio_km)
 print("Venus       |", venus_UA,   "|", venus_km)
 print("Tierra      |", tierra_UA,  "|", tierra_km)
 print("Marte       |", marte_UA,   "|", marte_km)
-print("Júpiter     |", jupiter_UA, "|", jupiter_km)
+print("Jupiter     |", jupiter_UA, "|", jupiter_km)
 print("Saturno     |", saturno_UA, "|", saturno_km)
-</div>
+```
 
 ---
 
-## 💻 Ejercicio 5 — Segundo por segundo
+## 💻 Ejercicio 5 — Conversor de tiempo
 
 <div class="lang-es">
 
-Muchos procesos científicos se miden en unidades de tiempo muy específicas.
-Creá un programa en tu PC que tome una cantidad de **segundos** y la convierta a:
-- Minutos
-- Horas
-- Días
-
-Usá como ejemplo la duración de un año en la Tierra: **31.536.000 segundos**.
+Creá un programa en tu PC que tome 31.536.000 segundos (1 año terrestre) y los convierta a
+minutos, horas y días. Luego hace lo mismo con un año en Marte (687 días terrestres).
 
 </div>
 <div class="lang-en">
 
-Many scientific processes are measured in very specific time units.
-Create a program on your PC that takes a number of **seconds** and converts it to:
-- Minutes
-- Hours
-- Days
-
-Use as an example the length of a year on Earth: **31,536,000 seconds**.
+Create a program on your PC that takes 31,536,000 seconds (1 Earth year) and converts them to
+minutes, hours, and days. Then do the same for a Martian year (687 Earth days).
 
 </div>
 
-<div class="py-interactive" data-mode="local">
-# Ejercicio 5 — Conversor de tiempo
-# Ejecutá este archivo con: python ejercicio5.py
+```{code-block} python
+:class: py-cell-local
 
-segundos_totales = 31536000  # 1 año en la Tierra
+# Ejercicio 5 — Conversor de tiempo
+# Ejecuta este archivo con: python ejercicio5.py
+
+segundos_totales = 31536000  # 1 año terrestre
 
 minutos = segundos_totales / 60
 horas   = minutos / 60
@@ -220,19 +214,19 @@ print("Un año en la Tierra equivale a:")
 print("  Segundos:", segundos_totales)
 print("  Minutos: ", minutos)
 print("  Horas:   ", horas)
-print("  Días:    ", dias)
+print("  Dias:    ", dias)
 
-# Bonus: ¿Y en Marte? Un año en Marte dura 687 días terrestres
+# Año en Marte
 anio_marte_dias = 687
 anio_marte_seg  = anio_marte_dias * 24 * 3600
 
 print()
 print("Un año en Marte dura:")
-print("  Días terrestres:", anio_marte_dias)
+print("  Dias terrestres:", anio_marte_dias)
 print("  Segundos:       ", anio_marte_seg)
-</div>
+```
 
 :::{note}
-<span class="lang-es">Para ejecutar estos archivos: guardá el código en un archivo `.py`, abrí la terminal en la carpeta donde lo guardaste y escribí <code>python nombre_del_archivo.py</code>. Si no sabés cómo, revisá la sección de <strong>Configuración</strong>.</span>
-<span class="lang-en">To run these files: save the code in a `.py` file, open the terminal in the folder where you saved it, and type <code>python filename.py</code>. If you're not sure how, review the <strong>Setup</strong> section.</span>
+<span class="lang-es">Para ejecutar estos archivos: guardá el código en un archivo <code>.py</code>, abrí la terminal en esa carpeta y escribí <code>python nombre_archivo.py</code>. Si necesitás ayuda, revisá la sección de <strong>Configuración</strong>.</span>
+<span class="lang-en">To run these files: save the code in a <code>.py</code> file, open the terminal in that folder, and type <code>python filename.py</code>. If you need help, review the <strong>Setup</strong> section.</span>
 :::

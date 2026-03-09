@@ -104,12 +104,20 @@ nav.bd-links .current {
   background: var(--sp-bg) !important;
 }
 
+/* --- Layout: fijar anchos de columnas ----------------------------------------- */
+:root {
+  --pst-sidebar-primary-width:   270px;
+  --pst-sidebar-secondary-width: 200px;
+}
+
 /* --- Encabezados -------------------------------------------------------------- */
+/* Scope a la zona del artículo para no romper el sidebar */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Space Grotesk', sans-serif !important;
 }
 
-h1 {
+article.bd-article h1,
+.bd-content h1 {
   font-size: 2.1rem;
   font-weight: 700;
   color: var(--sp-cyan) !important;
@@ -119,18 +127,34 @@ h1 {
   margin-bottom: 1.5rem;
 }
 
-h2 {
+article.bd-article h2,
+.bd-content h2 {
   font-size: 1.5rem;
   font-weight: 600;
   color: #a78bfa !important;
   margin-top: 2.5rem;
 }
 
-h3 {
+article.bd-article h3,
+.bd-content h3 {
   font-size: 1.15rem;
   color: var(--sp-cyan) !important;
   opacity: 0.85;
   margin-top: 2rem;
+}
+
+/* Títulos fuera del artículo (sidebar, breadcrumb) — no sobredimensionar */
+.bd-sidebar-primary h1,
+.bd-sidebar-primary h2,
+.bd-sidebar-secondary h1,
+.bd-sidebar-secondary h2,
+.bd-header-article h1 {
+  font-size: 1rem !important;
+  color: var(--sp-text) !important;
+  text-shadow: none !important;
+  border-bottom: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 /* --- Código ------------------------------------------------------------------- */

@@ -51,7 +51,6 @@
   const STORAGE_KEY = "swp-lang";
   let current = localStorage.getItem(STORAGE_KEY) || "es";
 
-  // Aplica clase al body lo antes posible para evitar flash de contenido incorrecto
   document.body.classList.add("lang-" + current);
 
   function updateBtn(btn) {
@@ -61,7 +60,6 @@
   }
 
   function insertToggle() {
-    // Intentar varios selectores que usa sphinx-book-theme
     const target =
       document.querySelector(".navbar-nav.ms-auto") ||
       document.querySelector(".navbar-nav") ||
@@ -107,17 +105,12 @@
   let loading   = false;
   let waitQueue = [];
 
-  /**
-   * Carga Pyodide desde CDN la primera vez que se necesita.
-   * Las llamadas posteriores devuelven la instancia ya cargada.
-   */
   async function getPyodide() {
     if (pyodide) return pyodide;
     if (loading) return new Promise((res) => waitQueue.push(res));
 
     loading = true;
 
-    // Cargar el script de Pyodide si no está ya en la página
     if (!window.loadPyodide) {
       await new Promise((res, rej) => {
         const s = document.createElement("script");
@@ -135,26 +128,16 @@
     return pyodide;
   }
 
-  /**
-   * Construye el widget de celda a partir de un elemento .py-interactive.
-   * data-mode="browser" → celda ejecutable en el navegador
-   * data-mode="local"   → código descargable (para ejecutar en la PC)
-   */
-  function buildCell(el) {
-    const isBrowser = (el.dataset.mode || "browser") !== "local";
-    const code = el.textContent.trim();
-
+  function buildCell(code, isBrowser) {
     const cell = document.createElement("div");
     cell.className = "py-cell " + (isBrowser ? "browser" : "local");
 
     /* ---- Header ---- */
     const header = document.createElement("div");
     header.className = "py-cell-header";
-
     const badge = document.createElement("span");
     badge.className = "py-badge " + (isBrowser ? "browser" : "local");
     badge.textContent = isBrowser ? "🌐 En el navegador" : "💻 En tu PC";
-
     header.appendChild(badge);
     header.insertAdjacentHTML("beforeend", "<span>python</span>");
 
@@ -166,7 +149,6 @@
     editor.autocorrect = "off";
     editor.autocapitalize = "off";
 
-    // Soporte de tecla Tab en el editor
     editor.addEventListener("keydown", (e) => {
       if (e.key === "Tab") {
         e.preventDefault();
@@ -177,7 +159,6 @@
       }
     });
 
-    // Ajuste automático de altura
     editor.addEventListener("input", () => {
       editor.style.height = "auto";
       editor.style.height = editor.scrollHeight + "px";
@@ -192,17 +173,14 @@
     output.className = "py-output";
 
     if (isBrowser) {
-      /* -- Botón Ejecutar -- */
       const runBtn = document.createElement("button");
       runBtn.className = "py-run-btn";
       runBtn.innerHTML = "&#9654; Ejecutar";
 
-      /* -- Botón Reiniciar -- */
       const resetBtn = document.createElement("button");
       resetBtn.className = "py-reset-btn";
       resetBtn.innerHTML = "&#8635; Reiniciar";
 
-      /* -- Indicador de estado -- */
       const status = document.createElement("span");
       status.className = "py-status";
       const spinner = document.createElement("span");
@@ -238,7 +216,6 @@
           output.textContent = captured.trimEnd() || "(sin salida)";
           output.classList.remove("error");
         } catch (err) {
-          // Mostrar solo el mensaje relevante (sin el stack de Pyodide)
           const lines = err.message.split("\n").filter(
             (l) => !l.includes("pyodide") && !l.includes("_pyodide") && l.trim()
           );
@@ -256,7 +233,6 @@
       footer.appendChild(status);
 
     } else {
-      /* -- Modo local: botón de descarga -- */
       const dlBtn = document.createElement("button");
       dlBtn.className = "py-download-btn";
       dlBtn.innerHTML = "&#8659; Descargar .py";
@@ -284,7 +260,6 @@
     cell.appendChild(footer);
     cell.appendChild(output);
 
-    // Ajustar altura inicial del editor
     requestAnimationFrame(() => {
       editor.style.height = "auto";
       editor.style.height = editor.scrollHeight + "px";
@@ -293,9 +268,28 @@
     return cell;
   }
 
+  /**
+   * Extrae el código desde el <pre> de un bloque de código de Sphinx.
+   * textContent decodifica entidades HTML (&quot; → ") y preserva newlines.
+   */
+  function extractCode(container) {
+    const pre = container.querySelector("pre");
+    if (!pre) return "";
+    const clone = pre.cloneNode(true);
+    // Eliminar botón "copiar" que agrega sphinx-copybutton
+    clone.querySelectorAll("button, .copybutton").forEach((b) => b.remove());
+    return clone.textContent.trim();
+  }
+
   function processPage() {
-    document.querySelectorAll(".py-interactive").forEach((el) => {
-      el.replaceWith(buildCell(el));
+    document.querySelectorAll(".py-cell-browser").forEach((container) => {
+      const code = extractCode(container);
+      if (code) container.replaceWith(buildCell(code, true));
+    });
+
+    document.querySelectorAll(".py-cell-local").forEach((container) => {
+      const code = extractCode(container);
+      if (code) container.replaceWith(buildCell(code, false));
     });
   }
 
