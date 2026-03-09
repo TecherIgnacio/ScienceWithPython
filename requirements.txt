@@ -1,2 +1,1 @@
-jupyter-book>=0.15,<1.0
-sphinx-design
+mkdocs-material>=9.5
