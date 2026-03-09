@@ -177,33 +177,9 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Módulo 1 · Introducción a Python</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="index.html">📖 Teoría</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ejemplos.html">🔬 Ejemplos — Módulo 1</a></li>
-
-
-
-
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">✏️ Ejercicios — Módulo 1</a></li>
-
-
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="extras.html">🏆 Retos Extra — Módulo 1</a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<li class="toctree-l1"><a class="reference internal" href="ejemplos.html">🔬 Ejemplos</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">✏️ Ejercicios</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extras.html">🏆 Retos Extra</a></li>
 </ul>
 
     </div>
@@ -352,25 +328,12 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">✏️ Ejercicios — Módulo 1</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicio-1-tu-primera-presentacion">🌐 Ejercicio 1 — Tu primera presentación</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicio-2-calculadora-de-velocidad">🌐 Ejercicio 2 — Calculadora de velocidad</a></li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#primero-converti-los-dias-a-horas-1-dia-24-horas">Primero convertí los días a horas (1 día = 24 horas)</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#ahora-calcula-la-velocidad-en-km-h">Ahora calculá la velocidad en km/h</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicio-3-area-de-un-circulo">🌐 Ejercicio 3 — Área de un círculo</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicio-4-conversion-de-unidades-astronomicas">💻 Ejercicio 4 — Conversión de unidades astronómicas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicio-4-conversion-de-unidades-astronomicas">💻 Ejercicio 4 — Conversión de Unidades Astronómicas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicio-5-conversor-de-tiempo">💻 Ejercicio 5 — Conversor de tiempo</a></li>
 </ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#distancias-al-sol-en-unidades-astronomicas-ua">Distancias al Sol en Unidades Astronómicas (UA)</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#convertir-a-kilometros">Convertir a kilómetros</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicio-5-segundo-por-segundo">💻 Ejercicio 5 — Segundo por segundo</a></li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-y-en-marte-un-ano-en-marte-dura-687-dias-terrestres">Bonus: ¿Y en Marte? Un año en Marte dura 687 días terrestres</a></li>
-</ul>
-
             </nav>
         </div>
     </div>
@@ -402,13 +365,16 @@ document.write(`
 <div class="lang-en">
 <p>Modify the code to print <strong>your name</strong>, your <strong>age</strong>, and your <strong>favorite planet</strong>.</p>
 </div>
-<div class="py-interactive" data-mode="browser"># Completá con tus datos
-nombre  = "..."   # Cambiá por tu nombre
-edad    = 0       # Cambiá por tu edad
-planeta = "..."   # Cambiá por tu planeta favorito
-<p>print(«Hola, me llamo», nombre)
-print(«Tengo», edad, «años»)
-print(«Mi planeta favorito es», planeta)</div></p>
+<div class="py-cell-browser highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Completá con tus datos</span>
+<span class="n">nombre</span>  <span class="o">=</span> <span class="s2">&quot;...&quot;</span>   <span class="c1"># Cambia por tu nombre</span>
+<span class="n">edad</span>    <span class="o">=</span> <span class="mi">0</span>       <span class="c1"># Cambia por tu edad</span>
+<span class="n">planeta</span> <span class="o">=</span> <span class="s2">&quot;...&quot;</span>   <span class="c1"># Cambia por tu planeta favorito</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hola, me llamo&quot;</span><span class="p">,</span> <span class="n">nombre</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tengo&quot;</span><span class="p">,</span> <span class="n">edad</span><span class="p">,</span> <span class="s2">&quot;años&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mi planeta favorito es&quot;</span><span class="p">,</span> <span class="n">planeta</span><span class="p">)</span>
+</pre></div>
+</div>
 </section>
 <hr class="docutils" />
 <section id="ejercicio-2-calculadora-de-velocidad">
@@ -423,162 +389,142 @@ que recorre 384.400 km (distancia Tierra-Luna) en 3 días.</p>
 <p>Complete the code to calculate the average speed of a spacecraft
 that travels 384,400 km (Earth-Moon distance) in 3 days.</p>
 </div>
-<div class="py-interactive" data-mode="browser">distancia_km = 384400  # km (distancia Tierra-Luna)
-tiempo_dias  = 3       # días
-</section>
-</section>
-<section id="primero-converti-los-dias-a-horas-1-dia-24-horas">
-<h1>Primero convertí los días a horas (1 día = 24 horas)<a class="headerlink" href="#primero-converti-los-dias-a-horas-1-dia-24-horas" title="Permalink to this heading">#</a></h1>
-<p>tiempo_horas = tiempo_dias * 24</p>
-</section>
-<section id="ahora-calcula-la-velocidad-en-km-h">
-<h1>Ahora calculá la velocidad en km/h<a class="headerlink" href="#ahora-calcula-la-velocidad-en-km-h" title="Permalink to this heading">#</a></h1>
-<p>velocidad = distancia_km / tiempo_horas</p>
-<p>print(«Distancia:», distancia_km, «km»)
-print(«Tiempo:», tiempo_horas, «horas»)
-print(«Velocidad promedio:», velocidad, «km/h»)</div></p>
+<div class="py-cell-browser highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">distancia_km</span> <span class="o">=</span> <span class="mi">384400</span>  <span class="c1"># km (distancia Tierra-Luna)</span>
+<span class="n">tiempo_dias</span>  <span class="o">=</span> <span class="mi">3</span>       <span class="c1"># dias</span>
+
+<span class="c1"># Convertí los días a horas (1 día = 24 horas)</span>
+<span class="n">tiempo_horas</span> <span class="o">=</span> <span class="n">tiempo_dias</span> <span class="o">*</span> <span class="mi">24</span>
+
+<span class="c1"># Calculá la velocidad en km/h</span>
+<span class="n">velocidad</span> <span class="o">=</span> <span class="n">distancia_km</span> <span class="o">/</span> <span class="n">tiempo_horas</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Distancia:&quot;</span><span class="p">,</span> <span class="n">distancia_km</span><span class="p">,</span> <span class="s2">&quot;km&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tiempo:&quot;</span><span class="p">,</span> <span class="n">tiempo_horas</span><span class="p">,</span> <span class="s2">&quot;horas&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Velocidad promedio:&quot;</span><span class="p">,</span> <span class="n">velocidad</span><span class="p">,</span> <span class="s2">&quot;km/h&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <div class="admonition tip">
 <p class="admonition-title">Truco</p>
 <p><span class="lang-es">¿Podés modificar el código para calcular también la velocidad en m/s? (1 km = 1000 m, 1 hora = 3600 s)</span>
 <span class="lang-en">Can you modify the code to also calculate the speed in m/s? (1 km = 1000 m, 1 hour = 3600 s)</span></p>
 </div>
+</section>
 <hr class="docutils" />
 <section id="ejercicio-3-area-de-un-circulo">
 <h2>🌐 Ejercicio 3 — Área de un círculo<a class="headerlink" href="#ejercicio-3-area-de-un-circulo" title="Permalink to this heading">#</a></h2>
 <div class="lang-es">
 <p>El área de un círculo es: <strong>A = π × r²</strong></p>
-<p>Calculá el área de:</p>
-<ol class="arabic simple">
-<li><p>La Tierra (radio ≈ 6.371 km)</p></li>
-<li><p>La Luna (radio ≈ 1.737 km)</p></li>
-</ol>
-<p>Y encontrá cuántas veces es más grande la sección transversal de la Tierra que la de la Luna.</p>
+<p>Calculá el área de la Tierra (radio ≈ 6.371 km) y la Luna (radio ≈ 1.737 km),
+y encontrá cuántas veces es más grande la Tierra que la Luna.</p>
 </div>
 <div class="lang-en">
 <p>The area of a circle is: <strong>A = π × r²</strong></p>
-<p>Calculate the area of:</p>
-<ol class="arabic simple">
-<li><p>Earth (radius ≈ 6,371 km)</p></li>
-<li><p>The Moon (radius ≈ 1,737 km)</p></li>
-</ol>
-<p>And find how many times larger Earth’s cross-section is compared to the Moon’s.</p>
+<p>Calculate the area of Earth (radius ≈ 6,371 km) and the Moon (radius ≈ 1,737 km),
+and find how many times larger Earth is compared to the Moon.</p>
 </div>
-<div class="py-interactive" data-mode="browser">pi = 3.14159265
-<p>radio_tierra = 6371   # km
-radio_luna   = 1737   # km</p>
-<p>area_tierra = pi * radio_tierra ** 2
-area_luna   = pi * radio_luna   ** 2</p>
-<p>veces = area_tierra / area_luna</p>
-<p>print(«Área de la sección de la Tierra:», round(area_tierra, 0), «km²»)
-print(«Área de la sección de la Luna:  «, round(area_luna,   0), «km²»)
-print(«La Tierra es», round(veces, 1), «veces más grande que la Luna»)</div></p>
+<div class="py-cell-browser highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pi</span> <span class="o">=</span> <span class="mf">3.14159265</span>
+
+<span class="n">radio_tierra</span> <span class="o">=</span> <span class="mi">6371</span>   <span class="c1"># km</span>
+<span class="n">radio_luna</span>   <span class="o">=</span> <span class="mi">1737</span>   <span class="c1"># km</span>
+
+<span class="n">area_tierra</span> <span class="o">=</span> <span class="n">pi</span> <span class="o">*</span> <span class="n">radio_tierra</span> <span class="o">**</span> <span class="mi">2</span>
+<span class="n">area_luna</span>   <span class="o">=</span> <span class="n">pi</span> <span class="o">*</span> <span class="n">radio_luna</span>   <span class="o">**</span> <span class="mi">2</span>
+
+<span class="n">veces</span> <span class="o">=</span> <span class="n">area_tierra</span> <span class="o">/</span> <span class="n">area_luna</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Area de la Tierra:&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">area_tierra</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="s2">&quot;km²&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Area de la Luna:  &quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">area_luna</span><span class="p">,</span>   <span class="mi">0</span><span class="p">),</span> <span class="s2">&quot;km²&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La Tierra es&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">veces</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="s2">&quot;veces mas grande que la Luna&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 </section>
 <hr class="docutils" />
 <section id="ejercicio-4-conversion-de-unidades-astronomicas">
-<h2>💻 Ejercicio 4 — Conversión de unidades astronómicas<a class="headerlink" href="#ejercicio-4-conversion-de-unidades-astronomicas" title="Permalink to this heading">#</a></h2>
+<h2>💻 Ejercicio 4 — Conversión de Unidades Astronómicas<a class="headerlink" href="#ejercicio-4-conversion-de-unidades-astronomicas" title="Permalink to this heading">#</a></h2>
 <div class="lang-es">
-<p>Una <strong>Unidad Astronómica (UA)</strong> es la distancia promedio de la Tierra al Sol: <strong>149.597.870 km</strong>.
-Es la unidad que se usa para medir distancias dentro del Sistema Solar.</p>
-<p>Creá un programa en tu PC que:</p>
-<ol class="arabic simple">
-<li><p>Defina la distancia de cada planeta al Sol en UA</p></li>
-<li><p>Convierta cada distancia a kilómetros</p></li>
-<li><p>Imprima los resultados</p></li>
-</ol>
+<p>Una <strong>Unidad Astronómica (UA)</strong> es la distancia promedio de la Tierra al Sol: 149.597.870 km.</p>
+<p>Creá un programa en tu PC que defina las distancias de cada planeta en UA,
+las convierta a km, y las imprima.</p>
 </div>
 <div class="lang-en">
-<p>An <strong>Astronomical Unit (AU)</strong> is the average distance from Earth to the Sun: <strong>149,597,870 km</strong>.
-It’s the unit used to measure distances within the Solar System.</p>
-<p>Create a program on your PC that:</p>
-<ol class="arabic simple">
-<li><p>Defines each planet’s distance from the Sun in AU</p></li>
-<li><p>Converts each distance to kilometers</p></li>
-<li><p>Prints the results</p></li>
-</ol>
+<p>An <strong>Astronomical Unit (AU)</strong> is the average distance from Earth to the Sun: 149,597,870 km.</p>
+<p>Create a program on your PC that defines each planet’s distance in AU,
+converts them to km, and prints the results.</p>
 </div>
-<div class="py-interactive" data-mode="local">
-# Ejercicio 4 — Conversión de Unidades Astronómicas
-# Ejecutá este archivo en tu PC con: python ejercicio4.py
-<p>UA_en_km = 149597870  # 1 UA en kilómetros</p>
-</section>
-</section>
-<section id="distancias-al-sol-en-unidades-astronomicas-ua">
-<h1>Distancias al Sol en Unidades Astronómicas (UA)<a class="headerlink" href="#distancias-al-sol-en-unidades-astronomicas-ua" title="Permalink to this heading">#</a></h1>
-<p>mercurio_UA = 0.39
-venus_UA    = 0.72
-tierra_UA   = 1.00
-marte_UA    = 1.52
-jupiter_UA  = 5.20
-saturno_UA  = 9.58</p>
-</section>
-<section id="convertir-a-kilometros">
-<h1>Convertir a kilómetros<a class="headerlink" href="#convertir-a-kilometros" title="Permalink to this heading">#</a></h1>
-<p>mercurio_km = mercurio_UA * UA_en_km
-venus_km    = venus_UA    * UA_en_km
-tierra_km   = tierra_UA   * UA_en_km
-marte_km    = marte_UA    * UA_en_km
-jupiter_km  = jupiter_UA  * UA_en_km
-saturno_km  = saturno_UA  * UA_en_km</p>
-<p>print(«Planeta     | UA    | Kilómetros»)
-print(«-» * 40)
-print(«Mercurio    |», mercurio_UA, «|», mercurio_km)
-print(«Venus       |», venus_UA,   «|», venus_km)
-print(«Tierra      |», tierra_UA,  «|», tierra_km)
-print(«Marte       |», marte_UA,   «|», marte_km)
-print(«Júpiter     |», jupiter_UA, «|», jupiter_km)
-print(«Saturno     |», saturno_UA, «|», saturno_km)</p>
+<div class="py-cell-local highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ejercicio 4 — Conversion de Unidades Astronomicas</span>
+<span class="c1"># Ejecuta este archivo con: python ejercicio4.py</span>
+
+<span class="n">UA_en_km</span> <span class="o">=</span> <span class="mi">149597870</span>  <span class="c1"># 1 UA en kilometros</span>
+
+<span class="c1"># Distancias al Sol en Unidades Astronomicas</span>
+<span class="n">mercurio_UA</span> <span class="o">=</span> <span class="mf">0.39</span>
+<span class="n">venus_UA</span>    <span class="o">=</span> <span class="mf">0.72</span>
+<span class="n">tierra_UA</span>   <span class="o">=</span> <span class="mf">1.00</span>
+<span class="n">marte_UA</span>    <span class="o">=</span> <span class="mf">1.52</span>
+<span class="n">jupiter_UA</span>  <span class="o">=</span> <span class="mf">5.20</span>
+<span class="n">saturno_UA</span>  <span class="o">=</span> <span class="mf">9.58</span>
+
+<span class="c1"># Convertir a kilometros</span>
+<span class="n">mercurio_km</span> <span class="o">=</span> <span class="n">mercurio_UA</span> <span class="o">*</span> <span class="n">UA_en_km</span>
+<span class="n">venus_km</span>    <span class="o">=</span> <span class="n">venus_UA</span>    <span class="o">*</span> <span class="n">UA_en_km</span>
+<span class="n">tierra_km</span>   <span class="o">=</span> <span class="n">tierra_UA</span>   <span class="o">*</span> <span class="n">UA_en_km</span>
+<span class="n">marte_km</span>    <span class="o">=</span> <span class="n">marte_UA</span>    <span class="o">*</span> <span class="n">UA_en_km</span>
+<span class="n">jupiter_km</span>  <span class="o">=</span> <span class="n">jupiter_UA</span>  <span class="o">*</span> <span class="n">UA_en_km</span>
+<span class="n">saturno_km</span>  <span class="o">=</span> <span class="n">saturno_UA</span>  <span class="o">*</span> <span class="n">UA_en_km</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Planeta     | UA    | Kilometros&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span> <span class="o">*</span> <span class="mi">38</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mercurio    |&quot;</span><span class="p">,</span> <span class="n">mercurio_UA</span><span class="p">,</span> <span class="s2">&quot;|&quot;</span><span class="p">,</span> <span class="n">mercurio_km</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Venus       |&quot;</span><span class="p">,</span> <span class="n">venus_UA</span><span class="p">,</span>   <span class="s2">&quot;|&quot;</span><span class="p">,</span> <span class="n">venus_km</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tierra      |&quot;</span><span class="p">,</span> <span class="n">tierra_UA</span><span class="p">,</span>  <span class="s2">&quot;|&quot;</span><span class="p">,</span> <span class="n">tierra_km</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Marte       |&quot;</span><span class="p">,</span> <span class="n">marte_UA</span><span class="p">,</span>   <span class="s2">&quot;|&quot;</span><span class="p">,</span> <span class="n">marte_km</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Jupiter     |&quot;</span><span class="p">,</span> <span class="n">jupiter_UA</span><span class="p">,</span> <span class="s2">&quot;|&quot;</span><span class="p">,</span> <span class="n">jupiter_km</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Saturno     |&quot;</span><span class="p">,</span> <span class="n">saturno_UA</span><span class="p">,</span> <span class="s2">&quot;|&quot;</span><span class="p">,</span> <span class="n">saturno_km</span><span class="p">)</span>
+</pre></div>
 </div>
+</section>
 <hr class="docutils" />
-<section id="ejercicio-5-segundo-por-segundo">
-<h2>💻 Ejercicio 5 — Segundo por segundo<a class="headerlink" href="#ejercicio-5-segundo-por-segundo" title="Permalink to this heading">#</a></h2>
+<section id="ejercicio-5-conversor-de-tiempo">
+<h2>💻 Ejercicio 5 — Conversor de tiempo<a class="headerlink" href="#ejercicio-5-conversor-de-tiempo" title="Permalink to this heading">#</a></h2>
 <div class="lang-es">
-<p>Muchos procesos científicos se miden en unidades de tiempo muy específicas.
-Creá un programa en tu PC que tome una cantidad de <strong>segundos</strong> y la convierta a:</p>
-<ul class="simple">
-<li><p>Minutos</p></li>
-<li><p>Horas</p></li>
-<li><p>Días</p></li>
-</ul>
-<p>Usá como ejemplo la duración de un año en la Tierra: <strong>31.536.000 segundos</strong>.</p>
+<p>Creá un programa en tu PC que tome 31.536.000 segundos (1 año terrestre) y los convierta a
+minutos, horas y días. Luego hace lo mismo con un año en Marte (687 días terrestres).</p>
 </div>
 <div class="lang-en">
-<p>Many scientific processes are measured in very specific time units.
-Create a program on your PC that takes a number of <strong>seconds</strong> and converts it to:</p>
-<ul class="simple">
-<li><p>Minutes</p></li>
-<li><p>Hours</p></li>
-<li><p>Days</p></li>
-</ul>
-<p>Use as an example the length of a year on Earth: <strong>31,536,000 seconds</strong>.</p>
+<p>Create a program on your PC that takes 31,536,000 seconds (1 Earth year) and converts them to
+minutes, hours, and days. Then do the same for a Martian year (687 Earth days).</p>
 </div>
-<div class="py-interactive" data-mode="local">
-# Ejercicio 5 — Conversor de tiempo
-# Ejecutá este archivo con: python ejercicio5.py
-<p>segundos_totales = 31536000  # 1 año en la Tierra</p>
-<p>minutos = segundos_totales / 60
-horas   = minutos / 60
-dias    = horas / 24</p>
-<p>print(«Un año en la Tierra equivale a:»)
-print(»  Segundos:», segundos_totales)
-print(»  Minutos: «, minutos)
-print(»  Horas:   «, horas)
-print(»  Días:    «, dias)</p>
-</section>
-</section>
-<section id="bonus-y-en-marte-un-ano-en-marte-dura-687-dias-terrestres">
-<h1>Bonus: ¿Y en Marte? Un año en Marte dura 687 días terrestres<a class="headerlink" href="#bonus-y-en-marte-un-ano-en-marte-dura-687-dias-terrestres" title="Permalink to this heading">#</a></h1>
-<p>anio_marte_dias = 687
-anio_marte_seg  = anio_marte_dias * 24 * 3600</p>
-<p>print()
-print(«Un año en Marte dura:»)
-print(»  Días terrestres:», anio_marte_dias)
-print(»  Segundos:       «, anio_marte_seg)</p>
+<div class="py-cell-local highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ejercicio 5 — Conversor de tiempo</span>
+<span class="c1"># Ejecuta este archivo con: python ejercicio5.py</span>
+
+<span class="n">segundos_totales</span> <span class="o">=</span> <span class="mi">31536000</span>  <span class="c1"># 1 año terrestre</span>
+
+<span class="n">minutos</span> <span class="o">=</span> <span class="n">segundos_totales</span> <span class="o">/</span> <span class="mi">60</span>
+<span class="n">horas</span>   <span class="o">=</span> <span class="n">minutos</span> <span class="o">/</span> <span class="mi">60</span>
+<span class="n">dias</span>    <span class="o">=</span> <span class="n">horas</span> <span class="o">/</span> <span class="mi">24</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Un año en la Tierra equivale a:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  Segundos:&quot;</span><span class="p">,</span> <span class="n">segundos_totales</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  Minutos: &quot;</span><span class="p">,</span> <span class="n">minutos</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  Horas:   &quot;</span><span class="p">,</span> <span class="n">horas</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  Dias:    &quot;</span><span class="p">,</span> <span class="n">dias</span><span class="p">)</span>
+
+<span class="c1"># Año en Marte</span>
+<span class="n">anio_marte_dias</span> <span class="o">=</span> <span class="mi">687</span>
+<span class="n">anio_marte_seg</span>  <span class="o">=</span> <span class="n">anio_marte_dias</span> <span class="o">*</span> <span class="mi">24</span> <span class="o">*</span> <span class="mi">3600</span>
+
+<span class="nb">print</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Un año en Marte dura:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  Dias terrestres:&quot;</span><span class="p">,</span> <span class="n">anio_marte_dias</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  Segundos:       &quot;</span><span class="p">,</span> <span class="n">anio_marte_seg</span><span class="p">)</span>
+</pre></div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Nota</p>
-<p><span class="lang-es">Para ejecutar estos archivos: guardá el código en un archivo <code class="docutils literal notranslate"><span class="pre">.py</span></code>, abrí la terminal en la carpeta donde lo guardaste y escribí <code>python nombre_del_archivo.py</code>. Si no sabés cómo, revisá la sección de <strong>Configuración</strong>.</span>
-<span class="lang-en">To run these files: save the code in a <code class="docutils literal notranslate"><span class="pre">.py</span></code> file, open the terminal in the folder where you saved it, and type <code>python filename.py</code>. If you’re not sure how, review the <strong>Setup</strong> section.</span></p>
+<p><span class="lang-es">Para ejecutar estos archivos: guardá el código en un archivo <code>.py</code>, abrí la terminal en esa carpeta y escribí <code>python nombre_archivo.py</code>. Si necesitás ayuda, revisá la sección de <strong>Configuración</strong>.</span>
+<span class="lang-en">To run these files: save the code in a <code>.py</code> file, open the terminal in that folder, and type <code>python filename.py</code>. If you need help, review the <strong>Setup</strong> section.</span></p>
 </div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -645,25 +591,12 @@ print(»  Segundos:       «, anio_marte_seg)</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">✏️ Ejercicios — Módulo 1</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicio-1-tu-primera-presentacion">🌐 Ejercicio 1 — Tu primera presentación</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicio-2-calculadora-de-velocidad">🌐 Ejercicio 2 — Calculadora de velocidad</a></li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#primero-converti-los-dias-a-horas-1-dia-24-horas">Primero convertí los días a horas (1 día = 24 horas)</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#ahora-calcula-la-velocidad-en-km-h">Ahora calculá la velocidad en km/h</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicio-3-area-de-un-circulo">🌐 Ejercicio 3 — Área de un círculo</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicio-4-conversion-de-unidades-astronomicas">💻 Ejercicio 4 — Conversión de unidades astronómicas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicio-4-conversion-de-unidades-astronomicas">💻 Ejercicio 4 — Conversión de Unidades Astronómicas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicio-5-conversor-de-tiempo">💻 Ejercicio 5 — Conversor de tiempo</a></li>
 </ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#distancias-al-sol-en-unidades-astronomicas-ua">Distancias al Sol en Unidades Astronómicas (UA)</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#convertir-a-kilometros">Convertir a kilómetros</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicio-5-segundo-por-segundo">💻 Ejercicio 5 — Segundo por segundo</a></li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-y-en-marte-un-ano-en-marte-dura-687-dias-terrestres">Bonus: ¿Y en Marte? Un año en Marte dura 687 días terrestres</a></li>
-</ul>
-
   </nav></div>
 
 </div></div>

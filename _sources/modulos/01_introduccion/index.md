@@ -34,12 +34,16 @@ Think of `print` as telling the computer: **"show this"**.
 
 ### Probalo vos mismo / Try it yourself
 
-<div class="lang-es">Hacé clic en **▶ Ejecutar** para ver el resultado:</div>
-<div class="lang-en">Click **▶ Ejecutar** to see the result:</div>
+<div class="lang-es">Hacé clic en <strong>▶ Ejecutar</strong> para ver el resultado:</div>
+<div class="lang-en">Click <strong>▶ Ejecutar</strong> to see the result:</div>
 
-<div class="py-interactive" data-mode="browser">print("¡Hola, universo!")
+```{code-block} python
+:class: py-cell-browser
+
+print("¡Hola, universo!")
 print("Python es genial")
-print(2025)</div>
+print(2025)
+```
 
 <div class="lang-es">
 
@@ -65,11 +69,15 @@ You can pass several values to `print()` separated by commas and it will display
 
 </div>
 
-<div class="py-interactive" data-mode="browser">print("La velocidad de la luz es", 300000, "km/s")</div>
+```{code-block} python
+:class: py-cell-browser
+
+print("La velocidad de la luz es", 300000, "km/s")
+```
 
 :::{tip}
-<span class="lang-es">El texto que va entre comillas se llama <strong>cadena de texto</strong> o <em>string</em>. Podés usar comillas simples `'hola'` o dobles `"hola"`, ambas funcionan igual.</span>
-<span class="lang-en">Text that goes between quotes is called a <strong>string</strong>. You can use single quotes `'hello'` or double quotes `"hello"`, both work the same way.</span>
+<span class="lang-es">El texto que va entre comillas se llama <strong>cadena de texto</strong> o <em>string</em>. Podés usar comillas simples <code>'hola'</code> o dobles <code>"hola"</code>, ambas funcionan igual.</span>
+<span class="lang-en">Text that goes between quotes is called a <strong>string</strong>. You can use single quotes <code>'hello'</code> or double quotes <code>"hello"</code>, both work the same way.</span>
 :::
 
 ---
@@ -89,13 +97,17 @@ When you use that name later, Python knows to look for the value in that box.
 
 </div>
 
-<div class="py-interactive" data-mode="browser">planeta = "Marte"
+```{code-block} python
+:class: py-cell-browser
+
+planeta = "Marte"
 distancia_km = 225000000
 temperatura_C = -63
 
 print("Planeta:", planeta)
 print("Distancia al Sol:", distancia_km, "km")
-print("Temperatura promedio:", temperatura_C, "°C")</div>
+print("Temperatura promedio:", temperatura_C, "°C")
+```
 
 <div class="lang-es">
 
@@ -120,29 +132,25 @@ print("Temperatura promedio:", temperatura_C, "°C")</div>
 
 ### Tipos de datos / Data Types
 
-<div class="lang-es">
-
-En Python existen diferentes tipos de valores. Los más importantes al comenzar son:
-
-</div>
-<div class="lang-en">
-
-In Python there are different types of values. The most important ones to start with are:
-
-</div>
+<div class="lang-es">En Python existen diferentes tipos de valores:</div>
+<div class="lang-en">In Python there are different types of values:</div>
 
 | Tipo / Type | <span class="lang-es">Descripción</span><span class="lang-en">Description</span> | <span class="lang-es">Ejemplo</span><span class="lang-en">Example</span> |
 |---|---|---|
 | `int` | <span class="lang-es">Número entero</span><span class="lang-en">Whole number</span> | `42`, `-7`, `2025` |
 | `float` | <span class="lang-es">Número decimal</span><span class="lang-en">Decimal number</span> | `3.14`, `9.8`, `-273.15` |
-| `str` | <span class="lang-es">Texto (string)</span><span class="lang-en">Text (string)</span> | `"Tierra"`, `'Júpiter'` |
+| `str` | <span class="lang-es">Texto (string)</span><span class="lang-en">Text (string)</span> | `"Tierra"`, `'Jupiter'` |
 
-<div class="py-interactive" data-mode="browser"># Ejemplos de los tres tipos
-año = 2025              # int
-gravedad = 9.8          # float (m/s²)
+```{code-block} python
+:class: py-cell-browser
+
+# Ejemplos de los tres tipos
+año = 2025                 # int
+gravedad = 9.8             # float (m/s²)
 nombre_planeta = "Tierra"  # str
 
-print(nombre_planeta, "— Gravedad:", gravedad, "m/s²  — Año:", año)</div>
+print(nombre_planeta, "— Gravedad:", gravedad, "m/s²  — Año:", año)
+```
 
 :::{note}
 <span class="lang-es">El símbolo <code>#</code> sirve para escribir <strong>comentarios</strong>: texto que Python ignora pero que ayuda a entender el código.</span>
@@ -153,16 +161,8 @@ print(nombre_planeta, "— Gravedad:", gravedad, "m/s²  — Año:", año)</div>
 
 ## 3. Operaciones Aritméticas / Arithmetic Operations
 
-<div class="lang-es">
-
-Python puede hacer cálculos matemáticos directamente. Estas son las operaciones disponibles:
-
-</div>
-<div class="lang-en">
-
-Python can perform math calculations directly. Here are the available operations:
-
-</div>
+<div class="lang-es">Python puede hacer cálculos matemáticos directamente:</div>
+<div class="lang-en">Python can perform math calculations directly:</div>
 
 | Operador | <span class="lang-es">Operación</span><span class="lang-en">Operation</span> | <span class="lang-es">Ejemplo</span><span class="lang-en">Example</span> | <span class="lang-es">Resultado</span><span class="lang-en">Result</span> |
 |---|---|---|---|
@@ -174,13 +174,17 @@ Python can perform math calculations directly. Here are the available operations
 | `%` | <span class="lang-es">Módulo (resto)</span><span class="lang-en">Modulo (remainder)</span> | `15 % 4` | `3` |
 | `**` | <span class="lang-es">Potencia</span><span class="lang-en">Exponentiation</span> | `2 ** 8` | `256` |
 
-<div class="py-interactive" data-mode="browser"># Python como calculadora
+```{code-block} python
+:class: py-cell-browser
+
+# Python como calculadora
 print(5 + 3)
 print(10 - 4)
 print(3 * 7)
 print(15 / 4)   # División normal → resultado decimal
 print(15 // 4)  # División entera → solo la parte entera
-print(2 ** 10)  # 2 elevado a la 10</div>
+print(2 ** 10)  # 2 elevado a la 10
+```
 
 ### Orden de operaciones / Order of Operations
 
@@ -195,10 +199,14 @@ Python follows the same order as in mathematics: first exponents, then multiplic
 
 </div>
 
-<div class="py-interactive" data-mode="browser">print(2 + 3 * 4)    # = 14  (primero 3*4=12, luego 2+12)
+```{code-block} python
+:class: py-cell-browser
+
+print(2 + 3 * 4)    # = 14  (primero 3*4=12, luego 2+12)
 print((2 + 3) * 4)  # = 20  (paréntesis primero)
 print(10 / 2 + 3)   # = 8.0
-print(10 / (2 + 3)) # = 2.0</div>
+print(10 / (2 + 3)) # = 2.0
+```
 
 ---
 
@@ -217,18 +225,22 @@ How long does it take light to travel from the Sun to Earth?
 
 </div>
 
-<div class="py-interactive" data-mode="browser"># ¿Cuánto tarda la luz en llegar del Sol a la Tierra?
+```{code-block} python
+:class: py-cell-browser
 
-velocidad_luz = 300000     # km/s
+# ¿Cuánto tarda la luz en llegar del Sol a la Tierra?
+
+velocidad_luz = 300000          # km/s
 distancia_sol_tierra = 150000000  # km
 
 tiempo_segundos = distancia_sol_tierra / velocidad_luz
 tiempo_minutos = tiempo_segundos / 60
 
 print("La luz tarda", tiempo_segundos, "segundos")
-print("O lo que es lo mismo:", tiempo_minutos, "minutos")</div>
+print("O lo que es lo mismo:", tiempo_minutos, "minutos")
+```
 
 :::{tip}
-<span class="lang-es">¡Modificá los valores y ejecutalo de nuevo! Por ejemplo, cambiá la distancia por la de Marte al Sol (228 millones de km) y calculá cuánto tardaría la luz en llegar allá.</span>
-<span class="lang-en">Modify the values and run it again! For example, change the distance to Mars's distance from the Sun (228 million km) and calculate how long light takes to get there.</span>
+<span class="lang-es">¡Modificá los valores y ejecutalo de nuevo! Por ejemplo, cambiá la distancia por la de Marte al Sol (228 millones de km).</span>
+<span class="lang-en">Modify the values and run it again! For example, change the distance to Mars's distance from the Sun (228 million km).</span>
 :::

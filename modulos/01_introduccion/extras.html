@@ -176,33 +176,9 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Módulo 1 · Introducción a Python</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="index.html">📖 Teoría</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ejemplos.html">🔬 Ejemplos — Módulo 1</a></li>
-
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="ejercicios.html">✏️ Ejercicios — Módulo 1</a></li>
-
-
-
-
-
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">🏆 Retos Extra — Módulo 1</a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<li class="toctree-l1"><a class="reference internal" href="ejemplos.html">🔬 Ejemplos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ejercicios.html">✏️ Ejercicios</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">🏆 Retos Extra</a></li>
 </ul>
 
     </div>
@@ -351,33 +327,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">🏆 Retos Extra — Módulo 1</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reto-1-velocidad-de-escape">🏆 Reto 1 — Velocidad de escape</a></li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tierra">Tierra</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#ve-tierra-completa-la-formula">ve_tierra = … (completá la fórmula)</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#print-velocidad-de-escape-tierra">print(«Velocidad de escape Tierra:», …)</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#marte-completa-vos">Marte (completá vos)</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#luna-completa-vos">Luna (completá vos)</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reto-2-el-teorema-de-pitagoras-en-el-espacio">🏆 Reto 2 — El teorema de Pitágoras en el espacio</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reto-3-densidad-de-planetas">🏆 Reto 3 — Densidad de planetas</a></li>
 </ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#distancia-entre-sondas">distancia_entre_sondas = …</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#print">print(…)</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reto-3-el-imc-de-los-planetas-densidad">🏆 Reto 3 — El IMC de los planetas (densidad)</a></li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Tierra</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#volumen-tierra">volumen_tierra   = …</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#densidad-tierra">densidad_tierra  = …</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#saturno">Saturno</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#volumen-saturno">volumen_saturno  = …</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#densidad-saturno">densidad_saturno = …</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#imprimi-los-resultados-y-compara-con-el-agua">Imprimí los resultados y compará con el agua</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">print(…)</a></li>
-</ul>
-
             </nav>
         </div>
     </div>
@@ -405,19 +358,16 @@ with a pre-given solution. Try to solve them on your own!</p>
 <p>La <strong>velocidad de escape</strong> es la velocidad mínima que necesita un cohete para
 alejarse de un planeta sin caer de vuelta. Su fórmula es:</p>
 <p><strong>v = √(2 × G × M / R)</strong></p>
-<p>Donde:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">G</span> <span class="pre">=</span> <span class="pre">6.674e-11</span></code> (constante de gravitación universal, en m³/kg·s²)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">G</span> <span class="pre">=</span> <span class="pre">6.674e-11</span></code> m³/kg·s²</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">M</span></code> = masa del planeta (kg)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">R</span></code> = radio del planeta (m)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">v</span></code> = velocidad de escape (m/s)</p></li>
 </ul>
-<p><strong>Tu misión:</strong> Calculá la velocidad de escape de la Tierra, Marte y la Luna.</p>
-<p>Datos:</p>
+<p><strong>Datos:</strong></p>
 <ul class="simple">
-<li><p>Tierra: masa = 5.972e24 kg, radio = 6.371e6 m</p></li>
-<li><p>Marte:  masa = 6.39e23 kg,  radio = 3.390e6 m</p></li>
-<li><p>Luna:   masa = 7.35e22 kg,  radio = 1.737e6 m</p></li>
+<li><p>Tierra: masa = <code class="docutils literal notranslate"><span class="pre">5.972e24</span></code> kg, radio = <code class="docutils literal notranslate"><span class="pre">6.371e6</span></code> m</p></li>
+<li><p>Marte:  masa = <code class="docutils literal notranslate"><span class="pre">6.39e23</span></code> kg,  radio = <code class="docutils literal notranslate"><span class="pre">3.390e6</span></code> m</p></li>
+<li><p>Luna:   masa = <code class="docutils literal notranslate"><span class="pre">7.35e22</span></code> kg,  radio = <code class="docutils literal notranslate"><span class="pre">1.737e6</span></code> m</p></li>
 </ul>
 <p><em>Pista: en Python, la raíz cuadrada de x se escribe como <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">**</span> <span class="pre">0.5</span></code></em></p>
 </div>
@@ -425,45 +375,36 @@ alejarse de un planeta sin caer de vuelta. Su fórmula es:</p>
 <p>The <strong>escape velocity</strong> is the minimum speed a rocket needs to leave a planet
 without falling back. Its formula is:</p>
 <p><strong>v = √(2 × G × M / R)</strong></p>
-<p>Where:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">G</span> <span class="pre">=</span> <span class="pre">6.674e-11</span></code> (universal gravitational constant, in m³/kg·s²)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">G</span> <span class="pre">=</span> <span class="pre">6.674e-11</span></code> m³/kg·s²</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">M</span></code> = planet mass (kg)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">R</span></code> = planet radius (m)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">v</span></code> = escape velocity (m/s)</p></li>
 </ul>
-<p><strong>Your mission:</strong> Calculate the escape velocity of Earth, Mars, and the Moon.</p>
-<p>Data:</p>
+<p><strong>Data:</strong></p>
 <ul class="simple">
-<li><p>Earth: mass = 5.972e24 kg, radius = 6.371e6 m</p></li>
-<li><p>Mars:  mass = 6.39e23 kg,  radius = 3.390e6 m</p></li>
-<li><p>Moon:  mass = 7.35e22 kg,  radius = 1.737e6 m</p></li>
+<li><p>Earth: mass = <code class="docutils literal notranslate"><span class="pre">5.972e24</span></code> kg, radius = <code class="docutils literal notranslate"><span class="pre">6.371e6</span></code> m</p></li>
+<li><p>Mars:  mass = <code class="docutils literal notranslate"><span class="pre">6.39e23</span></code> kg,  radius = <code class="docutils literal notranslate"><span class="pre">3.390e6</span></code> m</p></li>
+<li><p>Moon:  mass = <code class="docutils literal notranslate"><span class="pre">7.35e22</span></code> kg,  radius = <code class="docutils literal notranslate"><span class="pre">1.737e6</span></code> m</p></li>
 </ul>
 <p><em>Hint: in Python, the square root of x is written as <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">**</span> <span class="pre">0.5</span></code></em></p>
 </div>
-<div class="py-interactive" data-mode="browser">
-# Reto 1 — Velocidad de escape
-# Completá el código
-<p>G = 6.674e-11  # constante gravitacional</p>
-</section>
-</section>
-<section id="tierra">
-<h1>Tierra<a class="headerlink" href="#tierra" title="Permalink to this heading">#</a></h1>
-<p>masa_tierra  = 5.972e24
-radio_tierra = 6.371e6</p>
-</section>
-<section id="ve-tierra-completa-la-formula">
-<h1>ve_tierra = … (completá la fórmula)<a class="headerlink" href="#ve-tierra-completa-la-formula" title="Permalink to this heading">#</a></h1>
-</section>
-<section id="print-velocidad-de-escape-tierra">
-<h1>print(«Velocidad de escape Tierra:», …)<a class="headerlink" href="#print-velocidad-de-escape-tierra" title="Permalink to this heading">#</a></h1>
-</section>
-<section id="marte-completa-vos">
-<h1>Marte (completá vos)<a class="headerlink" href="#marte-completa-vos" title="Permalink to this heading">#</a></h1>
-</section>
-<section id="luna-completa-vos">
-<h1>Luna (completá vos)<a class="headerlink" href="#luna-completa-vos" title="Permalink to this heading">#</a></h1>
+<div class="py-cell-browser highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Reto 1 — Velocidad de escape</span>
+<span class="c1"># Completá el código</span>
+
+<span class="n">G</span> <span class="o">=</span> <span class="mf">6.674e-11</span>  <span class="c1"># constante gravitacional</span>
+
+<span class="c1"># Tierra</span>
+<span class="n">masa_tierra</span>  <span class="o">=</span> <span class="mf">5.972e24</span>
+<span class="n">radio_tierra</span> <span class="o">=</span> <span class="mf">6.371e6</span>
+<span class="c1"># ve_tierra = ... (completá la formula)</span>
+<span class="c1"># print(&quot;Velocidad de escape Tierra:&quot;, ...)</span>
+
+<span class="c1"># Marte (completá vos)</span>
+
+<span class="c1"># Luna (completá vos)</span>
+</pre></div>
 </div>
+</section>
 <hr class="docutils" />
 <section id="reto-2-el-teorema-de-pitagoras-en-el-espacio">
 <h2>🏆 Reto 2 — El teorema de Pitágoras en el espacio<a class="headerlink" href="#reto-2-el-teorema-de-pitagoras-en-el-espacio" title="Permalink to this heading">#</a></h2>
@@ -472,104 +413,85 @@ radio_tierra = 6.371e6</p>
 La sonda A viaja 450.000 km hacia el norte. La sonda B viaja 320.000 km hacia el este.</p>
 <p>¿Cuál es la distancia directa entre las dos sondas?</p>
 <p>Usá el <strong>Teorema de Pitágoras</strong>: <code class="docutils literal notranslate"><span class="pre">distancia</span> <span class="pre">=</span> <span class="pre">√(a²</span> <span class="pre">+</span> <span class="pre">b²)</span></code></p>
-<p><em>Pista: <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">**</span> <span class="pre">0.5</span></code> es la raíz cuadrada, <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">**</span> <span class="pre">2</span></code> es el cuadrado</em></p>
 </div>
 <div class="lang-en">
 <p>Two space probes depart from Earth in perpendicular directions.
 Probe A travels 450,000 km north. Probe B travels 320,000 km east.</p>
 <p>What is the direct distance between the two probes?</p>
 <p>Use the <strong>Pythagorean Theorem</strong>: <code class="docutils literal notranslate"><span class="pre">distance</span> <span class="pre">=</span> <span class="pre">√(a²</span> <span class="pre">+</span> <span class="pre">b²)</span></code></p>
-<p><em>Hint: <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">**</span> <span class="pre">0.5</span></code> is the square root, <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">**</span> <span class="pre">2</span></code> is the square</em></p>
 </div>
-<div class="py-interactive" data-mode="browser">
-# Reto 2 — Pitágoras en el espacio
-# Completá el código
-<p>distancia_a = 450000  # km (sonda A, hacia el norte)
-distancia_b = 320000  # km (sonda B, hacia el este)</p>
-</section>
-</section>
-<section id="distancia-entre-sondas">
-<h1>distancia_entre_sondas = …<a class="headerlink" href="#distancia-entre-sondas" title="Permalink to this heading">#</a></h1>
-</section>
-<section id="print">
-<h1>print(…)<a class="headerlink" href="#print" title="Permalink to this heading">#</a></h1>
+<div class="py-cell-browser highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Reto 2 — Pitagoras en el espacio</span>
+<span class="c1"># Completá el código</span>
+
+<span class="n">distancia_a</span> <span class="o">=</span> <span class="mi">450000</span>  <span class="c1"># km (sonda A, hacia el norte)</span>
+<span class="n">distancia_b</span> <span class="o">=</span> <span class="mi">320000</span>  <span class="c1"># km (sonda B, hacia el este)</span>
+
+<span class="c1"># distancia_entre_sondas = ...</span>
+<span class="c1"># print(...)</span>
+</pre></div>
 </div>
+</section>
 <hr class="docutils" />
-<section id="reto-3-el-imc-de-los-planetas-densidad">
-<h2>🏆 Reto 3 — El IMC de los planetas (densidad)<a class="headerlink" href="#reto-3-el-imc-de-los-planetas-densidad" title="Permalink to this heading">#</a></h2>
+<section id="reto-3-densidad-de-planetas">
+<h2>🏆 Reto 3 — Densidad de planetas<a class="headerlink" href="#reto-3-densidad-de-planetas" title="Permalink to this heading">#</a></h2>
 <div class="lang-es">
-<p>Así como los humanos tenemos el IMC (Índice de Masa Corporal), los planetas
-tienen <strong>densidad</strong>: cuánta masa tienen por unidad de volumen.</p>
+<p>Los planetas tienen <strong>densidad</strong>: cuánta masa tienen por unidad de volumen.</p>
 <p><strong>densidad = masa / volumen</strong></p>
-<p>El volumen de una esfera es: <code class="docutils literal notranslate"><span class="pre">V</span> <span class="pre">=</span> <span class="pre">(4/3)</span> <span class="pre">×</span> <span class="pre">π</span> <span class="pre">×</span> <span class="pre">r³</span></code></p>
-<p><strong>Tu misión:</strong>
-Calculá la densidad de la Tierra y de Saturno y compará con la densidad del agua (1000 kg/m³).</p>
-<p>Datos:</p>
+<p>El volumen de una esfera es: <strong>V = (4/3) × π × r³</strong></p>
+<p>Calculá la densidad de la Tierra y de Saturno, y compará con la densidad del agua (1000 kg/m³).
+¿Qué planeta podría flotar en un océano gigante?</p>
+<p><strong>Datos:</strong></p>
 <ul class="simple">
-<li><p>Tierra: masa = 5.972e24 kg, radio = 6.371e6 m</p></li>
-<li><p>Saturno: masa = 5.683e26 kg, radio = 5.823e7 m</p></li>
+<li><p>Tierra:  masa = <code class="docutils literal notranslate"><span class="pre">5.972e24</span></code> kg, radio = <code class="docutils literal notranslate"><span class="pre">6.371e6</span></code> m</p></li>
+<li><p>Saturno: masa = <code class="docutils literal notranslate"><span class="pre">5.683e26</span></code> kg, radio = <code class="docutils literal notranslate"><span class="pre">5.823e7</span></code> m</p></li>
 </ul>
-<p>¿Qué planeta podría flotar en un océano gigante?</p>
 </div>
 <div class="lang-en">
-<p>Just like humans have BMI (Body Mass Index), planets have <strong>density</strong>:
-how much mass they have per unit of volume.</p>
+<p>Planets have <strong>density</strong>: how much mass they have per unit of volume.</p>
 <p><strong>density = mass / volume</strong></p>
-<p>The volume of a sphere is: <code class="docutils literal notranslate"><span class="pre">V</span> <span class="pre">=</span> <span class="pre">(4/3)</span> <span class="pre">×</span> <span class="pre">π</span> <span class="pre">×</span> <span class="pre">r³</span></code></p>
-<p><strong>Your mission:</strong>
-Calculate the density of Earth and Saturn, then compare with the density of water (1000 kg/m³).</p>
-<p>Data:</p>
+<p>The volume of a sphere is: <strong>V = (4/3) × π × r³</strong></p>
+<p>Calculate the density of Earth and Saturn, and compare with the density of water (1000 kg/m³).
+Which planet could float in a giant ocean?</p>
+<p><strong>Data:</strong></p>
 <ul class="simple">
-<li><p>Earth:  mass = 5.972e24 kg, radius = 6.371e6 m</p></li>
-<li><p>Saturn: mass = 5.683e26 kg, radius = 5.823e7 m</p></li>
+<li><p>Earth:  mass = <code class="docutils literal notranslate"><span class="pre">5.972e24</span></code> kg, radius = <code class="docutils literal notranslate"><span class="pre">6.371e6</span></code> m</p></li>
+<li><p>Saturn: mass = <code class="docutils literal notranslate"><span class="pre">5.683e26</span></code> kg, radius = <code class="docutils literal notranslate"><span class="pre">5.823e7</span></code> m</p></li>
 </ul>
-<p>Which planet could float in a giant ocean?</p>
 </div>
-<div class="py-interactive" data-mode="browser">
-# Reto 3 — Densidad de planetas
-# Completá el código
-<p>pi = 3.14159265</p>
-</section>
-</section>
-<section id="id1">
-<h1>Tierra<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
-<p>masa_tierra  = 5.972e24   # kg
-radio_tierra = 6.371e6    # m</p>
-</section>
-<section id="volumen-tierra">
-<h1>volumen_tierra   = …<a class="headerlink" href="#volumen-tierra" title="Permalink to this heading">#</a></h1>
-</section>
-<section id="densidad-tierra">
-<h1>densidad_tierra  = …<a class="headerlink" href="#densidad-tierra" title="Permalink to this heading">#</a></h1>
-</section>
-<section id="saturno">
-<h1>Saturno<a class="headerlink" href="#saturno" title="Permalink to this heading">#</a></h1>
-<p>masa_saturno  = 5.683e26  # kg
-radio_saturno = 5.823e7   # m</p>
-</section>
-<section id="volumen-saturno">
-<h1>volumen_saturno  = …<a class="headerlink" href="#volumen-saturno" title="Permalink to this heading">#</a></h1>
-</section>
-<section id="densidad-saturno">
-<h1>densidad_saturno = …<a class="headerlink" href="#densidad-saturno" title="Permalink to this heading">#</a></h1>
-<p>densidad_agua = 1000  # kg/m³</p>
-</section>
-<section id="imprimi-los-resultados-y-compara-con-el-agua">
-<h1>Imprimí los resultados y compará con el agua<a class="headerlink" href="#imprimi-los-resultados-y-compara-con-el-agua" title="Permalink to this heading">#</a></h1>
-</section>
-<section id="id2">
-<h1>print(…)<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h1>
+<div class="py-cell-browser highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Reto 3 — Densidad de planetas</span>
+<span class="c1"># Completá el código</span>
+
+<span class="n">pi</span> <span class="o">=</span> <span class="mf">3.14159265</span>
+
+<span class="c1"># Tierra</span>
+<span class="n">masa_tierra</span>  <span class="o">=</span> <span class="mf">5.972e24</span>   <span class="c1"># kg</span>
+<span class="n">radio_tierra</span> <span class="o">=</span> <span class="mf">6.371e6</span>    <span class="c1"># m</span>
+<span class="c1"># volumen_tierra   = ...</span>
+<span class="c1"># densidad_tierra  = ...</span>
+
+<span class="c1"># Saturno</span>
+<span class="n">masa_saturno</span>  <span class="o">=</span> <span class="mf">5.683e26</span>  <span class="c1"># kg</span>
+<span class="n">radio_saturno</span> <span class="o">=</span> <span class="mf">5.823e7</span>   <span class="c1"># m</span>
+<span class="c1"># volumen_saturno  = ...</span>
+<span class="c1"># densidad_saturno = ...</span>
+
+<span class="n">densidad_agua</span> <span class="o">=</span> <span class="mi">1000</span>  <span class="c1"># kg/m³</span>
+
+<span class="c1"># Imprimí los resultados y compará con el agua</span>
+<span class="c1"># print(...)</span>
+</pre></div>
 </div>
 <hr class="docutils" />
 <div class="admonition important">
 <p class="admonition-title">Importante</p>
 <span class="lang-es">
-<strong>¿Bloqueado/a en algún reto?</strong> Eso es completamente normal. Intentá descomponerlo en partes más chicas: primero calculá una sola variable, imprimila, y después seguí. El debugging (buscar errores) es una habilidad tan importante como programar.
+<strong>¿Bloqueado/a en algún reto?</strong> Eso es completamente normal. Intentá descomponerlo en partes más chicas: primero calculá una sola variable, imprimila, y después seguí. El debugging es una habilidad tan importante como programar.
 </span>
 <span class="lang-en">
-<strong>Stuck on a challenge?</strong> That's completely normal. Try breaking it into smaller parts: first calculate just one variable, print it, then continue. Debugging (finding errors) is a skill just as important as programming.
+<strong>Stuck on a challenge?</strong> That's completely normal. Try breaking it into smaller parts: first calculate just one variable, print it, then continue. Debugging is a skill just as important as programming.
 </span>
 </div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -627,33 +549,10 @@ radio_saturno = 5.823e7   # m</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">🏆 Retos Extra — Módulo 1</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reto-1-velocidad-de-escape">🏆 Reto 1 — Velocidad de escape</a></li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tierra">Tierra</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#ve-tierra-completa-la-formula">ve_tierra = … (completá la fórmula)</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#print-velocidad-de-escape-tierra">print(«Velocidad de escape Tierra:», …)</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#marte-completa-vos">Marte (completá vos)</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#luna-completa-vos">Luna (completá vos)</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reto-2-el-teorema-de-pitagoras-en-el-espacio">🏆 Reto 2 — El teorema de Pitágoras en el espacio</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reto-3-densidad-de-planetas">🏆 Reto 3 — Densidad de planetas</a></li>
 </ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#distancia-entre-sondas">distancia_entre_sondas = …</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#print">print(…)</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reto-3-el-imc-de-los-planetas-densidad">🏆 Reto 3 — El IMC de los planetas (densidad)</a></li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Tierra</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#volumen-tierra">volumen_tierra   = …</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#densidad-tierra">densidad_tierra  = …</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#saturno">Saturno</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#volumen-saturno">volumen_saturno  = …</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#densidad-saturno">densidad_saturno = …</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#imprimi-los-resultados-y-compara-con-el-agua">Imprimí los resultados y compará con el agua</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">print(…)</a></li>
-</ul>
-
   </nav></div>
 
 </div></div>

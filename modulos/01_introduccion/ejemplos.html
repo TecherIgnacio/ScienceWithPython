@@ -177,33 +177,9 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Módulo 1 · Introducción a Python</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="index.html">📖 Teoría</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">🔬 Ejemplos — Módulo 1</a></li>
-
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="ejercicios.html">✏️ Ejercicios — Módulo 1</a></li>
-
-
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="extras.html">🏆 Retos Extra — Módulo 1</a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">🔬 Ejemplos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ejercicios.html">✏️ Ejercicios</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extras.html">🏆 Retos Extra</a></li>
 </ul>
 
     </div>
@@ -352,23 +328,11 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">🔬 Ejemplos — Módulo 1</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplo-1-velocidad-de-la-luz-en-el-sistema-solar">Ejemplo 1 — Velocidad de la luz en el Sistema Solar</a></li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#calculamos-el-tiempo-en-minutos-para-cada-planeta">Calculamos el tiempo en minutos para cada planeta</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplo-2-conversion-de-temperatura">Ejemplo 2 — Conversión de temperatura</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplo-3-energia-cinetica-de-un-objeto">Ejemplo 3 — Energía cinética de un objeto</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplo-3-energia-cinetica">Ejemplo 3 — Energía cinética</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplo-4-peso-en-otros-planetas">Ejemplo 4 — Peso en otros planetas</a></li>
 </ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#una-pelota-de-tenis-en-un-partido">Una pelota de tenis en un partido</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#un-auto-en-la-autopista">Un auto en la autopista</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#la-estacion-espacial-internacional">La Estación Espacial Internacional</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplo-4-calculo-de-peso-en-otros-planetas">Ejemplo 4 — Cálculo de peso en otros planetas</a></li>
-</ul>
-</li>
-</ul>
-
             </nav>
         </div>
     </div>
@@ -400,160 +364,139 @@ tarda en viajar entre cualquier planeta y el Sol.</p>
 <p>The speed of light is <strong>300,000 km/s</strong>. With that we can calculate how long
 it takes to travel between any planet and the Sun.</p>
 </div>
-<div class="py-interactive" data-mode="browser"># Distancias promedio de cada planeta al Sol (en km)
-velocidad_luz = 300000  # km/s
-<p>mercurio = 57900000
-venus    = 108200000
-tierra   = 149600000
-marte    = 227900000
-jupiter  = 778500000</p>
-</section>
-</section>
-<section id="calculamos-el-tiempo-en-minutos-para-cada-planeta">
-<h1>Calculamos el tiempo en minutos para cada planeta<a class="headerlink" href="#calculamos-el-tiempo-en-minutos-para-cada-planeta" title="Permalink to this heading">#</a></h1>
-<p>t_mercurio = (mercurio / velocidad_luz) / 60
-t_venus    = (venus    / velocidad_luz) / 60
-t_tierra   = (tierra   / velocidad_luz) / 60
-t_marte    = (marte    / velocidad_luz) / 60
-t_jupiter  = (jupiter  / velocidad_luz) / 60</p>
-<p>print(«Tiempo que tarda la luz en llegar al Sol:»)
-print(»  Mercurio:», round(t_mercurio, 2), «minutos»)
-print(»  Venus:   «, round(t_venus,    2), «minutos»)
-print(»  Tierra:  «, round(t_tierra,   2), «minutos»)
-print(»  Marte:   «, round(t_marte,    2), «minutos»)
-print(»  Júpiter: «, round(t_jupiter,  2), «minutos»)</div></p>
+<div class="py-cell-browser highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Distancias promedio de cada planeta al Sol (en km)</span>
+<span class="n">velocidad_luz</span> <span class="o">=</span> <span class="mi">300000</span>  <span class="c1"># km/s</span>
+
+<span class="n">mercurio</span> <span class="o">=</span> <span class="mi">57900000</span>
+<span class="n">venus</span>    <span class="o">=</span> <span class="mi">108200000</span>
+<span class="n">tierra</span>   <span class="o">=</span> <span class="mi">149600000</span>
+<span class="n">marte</span>    <span class="o">=</span> <span class="mi">227900000</span>
+<span class="n">jupiter</span>  <span class="o">=</span> <span class="mi">778500000</span>
+
+<span class="c1"># Calculamos el tiempo en minutos para cada planeta</span>
+<span class="n">t_mercurio</span> <span class="o">=</span> <span class="p">(</span><span class="n">mercurio</span> <span class="o">/</span> <span class="n">velocidad_luz</span><span class="p">)</span> <span class="o">/</span> <span class="mi">60</span>
+<span class="n">t_venus</span>    <span class="o">=</span> <span class="p">(</span><span class="n">venus</span>    <span class="o">/</span> <span class="n">velocidad_luz</span><span class="p">)</span> <span class="o">/</span> <span class="mi">60</span>
+<span class="n">t_tierra</span>   <span class="o">=</span> <span class="p">(</span><span class="n">tierra</span>   <span class="o">/</span> <span class="n">velocidad_luz</span><span class="p">)</span> <span class="o">/</span> <span class="mi">60</span>
+<span class="n">t_marte</span>    <span class="o">=</span> <span class="p">(</span><span class="n">marte</span>    <span class="o">/</span> <span class="n">velocidad_luz</span><span class="p">)</span> <span class="o">/</span> <span class="mi">60</span>
+<span class="n">t_jupiter</span>  <span class="o">=</span> <span class="p">(</span><span class="n">jupiter</span>  <span class="o">/</span> <span class="n">velocidad_luz</span><span class="p">)</span> <span class="o">/</span> <span class="mi">60</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tiempo que tarda la luz en llegar al Sol:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  Mercurio:&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">t_mercurio</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="s2">&quot;minutos&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  Venus:   &quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">t_venus</span><span class="p">,</span>    <span class="mi">2</span><span class="p">),</span> <span class="s2">&quot;minutos&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  Tierra:  &quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">t_tierra</span><span class="p">,</span>   <span class="mi">2</span><span class="p">),</span> <span class="s2">&quot;minutos&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  Marte:   &quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">t_marte</span><span class="p">,</span>    <span class="mi">2</span><span class="p">),</span> <span class="s2">&quot;minutos&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  Jupiter: &quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">t_jupiter</span><span class="p">,</span>  <span class="mi">2</span><span class="p">),</span> <span class="s2">&quot;minutos&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Nota</p>
-<p><span class="lang-es">Usamos <code class="docutils literal notranslate"><span class="pre">round(numero,</span> <span class="pre">decimales)</span></code> para redondear el resultado. Eso no lo vimos en la teoría, ¡pero podés probarlo! Los paréntesis significan que es una función, igual que <code class="docutils literal notranslate"><span class="pre">print()</span></code>.</span>
-<span class="lang-en">We use <code class="docutils literal notranslate"><span class="pre">round(number,</span> <span class="pre">decimals)</span></code> to round the result. We haven’t covered this in theory yet, but you can try it! The parentheses mean it’s a function, just like <code class="docutils literal notranslate"><span class="pre">print()</span></code>.</span></p>
+<p><span class="lang-es">Usamos <code>round(numero, decimales)</code> para redondear el resultado. Los paréntesis significan que es una función, igual que <code>print()</code>.</span>
+<span class="lang-en">We use <code>round(number, decimals)</code> to round the result. The parentheses mean it’s a function, just like <code>print()</code>.</span></p>
 </div>
+</section>
 <hr class="docutils" />
 <section id="ejemplo-2-conversion-de-temperatura">
 <h2>Ejemplo 2 — Conversión de temperatura<a class="headerlink" href="#ejemplo-2-conversion-de-temperatura" title="Permalink to this heading">#</a></h2>
 <div class="lang-es">
-<p>En ciencia se usan tres escalas de temperatura: <strong>Celsius</strong>, <strong>Fahrenheit</strong> y <strong>Kelvin</strong>.
-Las fórmulas para convertir entre ellas son:</p>
+<p>En ciencia se usan tres escalas de temperatura: <strong>Celsius</strong>, <strong>Fahrenheit</strong> y <strong>Kelvin</strong>.</p>
 <ul class="simple">
 <li><p>Celsius → Fahrenheit: <code class="docutils literal notranslate"><span class="pre">F</span> <span class="pre">=</span> <span class="pre">C</span> <span class="pre">×</span> <span class="pre">9/5</span> <span class="pre">+</span> <span class="pre">32</span></code></p></li>
 <li><p>Celsius → Kelvin: <code class="docutils literal notranslate"><span class="pre">K</span> <span class="pre">=</span> <span class="pre">C</span> <span class="pre">+</span> <span class="pre">273.15</span></code></p></li>
 </ul>
 </div>
 <div class="lang-en">
-<p>In science, three temperature scales are used: <strong>Celsius</strong>, <strong>Fahrenheit</strong>, and <strong>Kelvin</strong>.
-The conversion formulas are:</p>
+<p>In science, three temperature scales are used: <strong>Celsius</strong>, <strong>Fahrenheit</strong>, and <strong>Kelvin</strong>.</p>
 <ul class="simple">
 <li><p>Celsius → Fahrenheit: <code class="docutils literal notranslate"><span class="pre">F</span> <span class="pre">=</span> <span class="pre">C</span> <span class="pre">×</span> <span class="pre">9/5</span> <span class="pre">+</span> <span class="pre">32</span></code></p></li>
 <li><p>Celsius → Kelvin: <code class="docutils literal notranslate"><span class="pre">K</span> <span class="pre">=</span> <span class="pre">C</span> <span class="pre">+</span> <span class="pre">273.15</span></code></p></li>
 </ul>
 </div>
-<div class="py-interactive" data-mode="browser"># Temperaturas extremas del Sistema Solar en Celsius
-lugares = [
-    ("Superficie del Sol",     5500),
-    ("Venus (superficie)",      465),
-    ("Tierra (promedio)",        15),
-    ("Marte (promedio)",        -63),
-    ("Plutón (superficie)",    -229),
-]
-<p>print(«Lugar                    | Celsius | Fahrenheit | Kelvin»)
-print(«-» * 55)</p>
-<p>for nombre, celsius in lugares:
-fahrenheit = celsius * 9/5 + 32
-kelvin     = celsius + 273.15
-print(f»{nombre:&lt;25}| {celsius:&gt;7} | {fahrenheit:&gt;10.1f} | {kelvin:&gt;6.2f}»)</div></p>
+<div class="py-cell-browser highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Temperatura de distintos lugares del Sistema Solar</span>
+<span class="n">nombre</span>   <span class="o">=</span> <span class="s2">&quot;Marte (promedio)&quot;</span>
+<span class="n">celsius</span>  <span class="o">=</span> <span class="o">-</span><span class="mi">63</span>
+
+<span class="n">fahrenheit</span> <span class="o">=</span> <span class="n">celsius</span> <span class="o">*</span> <span class="mi">9</span><span class="o">/</span><span class="mi">5</span> <span class="o">+</span> <span class="mi">32</span>
+<span class="n">kelvin</span>     <span class="o">=</span> <span class="n">celsius</span> <span class="o">+</span> <span class="mf">273.15</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Lugar:&quot;</span><span class="p">,</span> <span class="n">nombre</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Celsius:   &quot;</span><span class="p">,</span> <span class="n">celsius</span><span class="p">,</span> <span class="s2">&quot;°C&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Fahrenheit:&quot;</span><span class="p">,</span> <span class="n">fahrenheit</span><span class="p">,</span> <span class="s2">&quot;°F&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Kelvin:    &quot;</span><span class="p">,</span> <span class="n">kelvin</span><span class="p">,</span> <span class="s2">&quot;K&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <div class="lang-es">
-<p>Podés modificar la lista de lugares y temperaturas para explorar otros valores.</p>
+<p>¡Cambiá los valores de <code>nombre</code> y <code>celsius</code> para explorar otros planetas!</p>
 </div>
 <div class="lang-en">
-<p>You can modify the list of places and temperatures to explore other values.</p>
+<p>Change the values of <code>nombre</code> and <code>celsius</code> to explore other planets!</p>
 </div>
 </section>
 <hr class="docutils" />
-<section id="ejemplo-3-energia-cinetica-de-un-objeto">
-<h2>Ejemplo 3 — Energía cinética de un objeto<a class="headerlink" href="#ejemplo-3-energia-cinetica-de-un-objeto" title="Permalink to this heading">#</a></h2>
+<section id="ejemplo-3-energia-cinetica">
+<h2>Ejemplo 3 — Energía cinética<a class="headerlink" href="#ejemplo-3-energia-cinetica" title="Permalink to this heading">#</a></h2>
 <div class="lang-es">
 <p>La <strong>energía cinética</strong> es la energía que tiene un objeto por estar en movimiento.
-Su fórmula es:</p>
-<p><strong>E = ½ × m × v²</strong></p>
-<p>Donde:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">m</span></code> = masa en kilogramos (kg)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">v</span></code> = velocidad en metros por segundo (m/s)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">E</span></code> = energía en Joules (J)</p></li>
-</ul>
+Su fórmula es: <strong>E = ½ × m × v²</strong></p>
+<p>Donde <code class="docutils literal notranslate"><span class="pre">m</span></code> es la masa en kg y <code class="docutils literal notranslate"><span class="pre">v</span></code> es la velocidad en m/s.</p>
 </div>
 <div class="lang-en">
 <p><strong>Kinetic energy</strong> is the energy an object has due to its motion.
-Its formula is:</p>
-<p><strong>E = ½ × m × v²</strong></p>
-<p>Where:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">m</span></code> = mass in kilograms (kg)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">v</span></code> = velocity in meters per second (m/s)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">E</span></code> = energy in Joules (J)</p></li>
-</ul>
+Its formula is: <strong>E = ½ × m × v²</strong></p>
+<p>Where <code class="docutils literal notranslate"><span class="pre">m</span></code> is mass in kg and <code class="docutils literal notranslate"><span class="pre">v</span></code> is velocity in m/s.</p>
 </div>
-<div class="py-interactive" data-mode="browser"># Energía cinética de distintos objetos
-</section>
-</section>
-<section id="una-pelota-de-tenis-en-un-partido">
-<h1>Una pelota de tenis en un partido<a class="headerlink" href="#una-pelota-de-tenis-en-un-partido" title="Permalink to this heading">#</a></h1>
-<p>masa_pelota = 0.058   # kg (~58 gramos)
-vel_pelota  = 60      # m/s (~216 km/h)
-ek_pelota   = 0.5 * masa_pelota * vel_pelota ** 2</p>
-</section>
-<section id="un-auto-en-la-autopista">
-<h1>Un auto en la autopista<a class="headerlink" href="#un-auto-en-la-autopista" title="Permalink to this heading">#</a></h1>
-<p>masa_auto = 1200      # kg
-vel_auto  = 27.8      # m/s (~100 km/h)
-ek_auto   = 0.5 * masa_auto * vel_auto ** 2</p>
-</section>
-<section id="la-estacion-espacial-internacional">
-<h1>La Estación Espacial Internacional<a class="headerlink" href="#la-estacion-espacial-internacional" title="Permalink to this heading">#</a></h1>
-<p>masa_iss = 420000     # kg (420 toneladas)
-vel_iss  = 7660       # m/s (velocidad orbital)
-ek_iss   = 0.5 * masa_iss * vel_iss ** 2</p>
-<p>print(«Energía cinética de distintos objetos:»)
-print(»  Pelota de tenis:  «, ek_pelota,  «J»)
-print(»  Auto a 100 km/h:  «, ek_auto,    «J»)
-print(»  ISS en órbita:    «, ek_iss,     «J»)</div></p>
-<div class="admonition tip">
-<p class="admonition-title">Truco</p>
-<p><span class="lang-es">¿La energía cinética de la ISS parece un número enorme? ¡Es porque sí lo es! Experimenta cambiando los valores para desarrollar intuición científica.</span>
-<span class="lang-en">Does the ISS’s kinetic energy seem like a huge number? It is! Experiment by changing the values to build scientific intuition.</span></p>
+<div class="py-cell-browser highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Energía cinética de distintos objetos</span>
+
+<span class="c1"># Una pelota de tenis en un partido</span>
+<span class="n">masa_pelota</span> <span class="o">=</span> <span class="mf">0.058</span>   <span class="c1"># kg (~58 gramos)</span>
+<span class="n">vel_pelota</span>  <span class="o">=</span> <span class="mi">60</span>      <span class="c1"># m/s (~216 km/h)</span>
+<span class="n">ek_pelota</span>   <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">masa_pelota</span> <span class="o">*</span> <span class="n">vel_pelota</span> <span class="o">**</span> <span class="mi">2</span>
+
+<span class="c1"># Un auto en la autopista</span>
+<span class="n">masa_auto</span> <span class="o">=</span> <span class="mi">1200</span>      <span class="c1"># kg</span>
+<span class="n">vel_auto</span>  <span class="o">=</span> <span class="mf">27.8</span>      <span class="c1"># m/s (~100 km/h)</span>
+<span class="n">ek_auto</span>   <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">masa_auto</span> <span class="o">*</span> <span class="n">vel_auto</span> <span class="o">**</span> <span class="mi">2</span>
+
+<span class="c1"># La Estación Espacial Internacional</span>
+<span class="n">masa_iss</span> <span class="o">=</span> <span class="mi">420000</span>     <span class="c1"># kg (420 toneladas)</span>
+<span class="n">vel_iss</span>  <span class="o">=</span> <span class="mi">7660</span>       <span class="c1"># m/s (velocidad orbital)</span>
+<span class="n">ek_iss</span>   <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">masa_iss</span> <span class="o">*</span> <span class="n">vel_iss</span> <span class="o">**</span> <span class="mi">2</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Energia cinetica de distintos objetos:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  Pelota de tenis:&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">ek_pelota</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="s2">&quot;J&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  Auto a 100 km/h:&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">ek_auto</span><span class="p">,</span>   <span class="mi">1</span><span class="p">),</span> <span class="s2">&quot;J&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  ISS en orbita:  &quot;</span><span class="p">,</span> <span class="n">ek_iss</span><span class="p">,</span>             <span class="s2">&quot;J&quot;</span><span class="p">)</span>
+</pre></div>
 </div>
+</section>
 <hr class="docutils" />
-<section id="ejemplo-4-calculo-de-peso-en-otros-planetas">
-<h2>Ejemplo 4 — Cálculo de peso en otros planetas<a class="headerlink" href="#ejemplo-4-calculo-de-peso-en-otros-planetas" title="Permalink to this heading">#</a></h2>
+<section id="ejemplo-4-peso-en-otros-planetas">
+<h2>Ejemplo 4 — Peso en otros planetas<a class="headerlink" href="#ejemplo-4-peso-en-otros-planetas" title="Permalink to this heading">#</a></h2>
 <div class="lang-es">
 <p>Tu peso depende de la gravedad del planeta donde estés.
-La fórmula es simple: <strong>Peso = masa × gravedad</strong></p>
-<p>La gravedad de cada planeta (en m/s²):</p>
+La fórmula es: <strong>Peso = masa × gravedad</strong></p>
 </div>
 <div class="lang-en">
 <p>Your weight depends on the gravity of the planet you’re on.
-The formula is simple: <strong>Weight = mass × gravity</strong></p>
-<p>Gravity on each planet (in m/s²):</p>
+The formula is: <strong>Weight = mass × gravity</strong></p>
 </div>
-<div class="py-interactive" data-mode="browser"># ¿Cuánto pesarías en cada planeta?
-tu_masa = 50  # Cambiá este valor por tu masa en kg
-<p>gravedad_mercurio = 3.7
-gravedad_venus    = 8.87
-gravedad_tierra   = 9.8
-gravedad_marte    = 3.72
-gravedad_jupiter  = 24.79
-gravedad_luna     = 1.62</p>
-<p>print(«Con una masa de», tu_masa, «kg, tu peso sería:»)
-print(»  En Mercurio:», round(tu_masa * gravedad_mercurio, 1), «N»)
-print(»  En Venus:   «, round(tu_masa * gravedad_venus,    1), «N»)
-print(»  En la Tierra:», round(tu_masa * gravedad_tierra,  1), «N»)
-print(»  En Marte:   «, round(tu_masa * gravedad_marte,    1), «N»)
-print(»  En Júpiter: «, round(tu_masa * gravedad_jupiter,  1), «N»)
-print(»  En la Luna: «, round(tu_masa * gravedad_luna,     1), «N»)</div></p>
-<div class="lang-es">
-<p>¡Cambiá <code class="docutils literal notranslate"><span class="pre">tu_masa</span></code> al principio del código para ver los resultados con tu propio peso!</p>
-</div>
-<div class="lang-en">
-<p>Change <code class="docutils literal notranslate"><span class="pre">tu_masa</span></code> at the top of the code to see results with your own mass!</p>
+<div class="py-cell-browser highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Cambia tu_masa por tu propio valor en kg</span>
+<span class="n">tu_masa</span> <span class="o">=</span> <span class="mi">50</span>  <span class="c1"># kg</span>
+
+<span class="n">g_mercurio</span> <span class="o">=</span> <span class="mf">3.7</span>
+<span class="n">g_venus</span>    <span class="o">=</span> <span class="mf">8.87</span>
+<span class="n">g_tierra</span>   <span class="o">=</span> <span class="mf">9.8</span>
+<span class="n">g_marte</span>    <span class="o">=</span> <span class="mf">3.72</span>
+<span class="n">g_jupiter</span>  <span class="o">=</span> <span class="mf">24.79</span>
+<span class="n">g_luna</span>     <span class="o">=</span> <span class="mf">1.62</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Con una masa de&quot;</span><span class="p">,</span> <span class="n">tu_masa</span><span class="p">,</span> <span class="s2">&quot;kg, tu peso seria:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  Mercurio:&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">tu_masa</span> <span class="o">*</span> <span class="n">g_mercurio</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="s2">&quot;N&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  Venus:   &quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">tu_masa</span> <span class="o">*</span> <span class="n">g_venus</span><span class="p">,</span>    <span class="mi">1</span><span class="p">),</span> <span class="s2">&quot;N&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  Tierra:  &quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">tu_masa</span> <span class="o">*</span> <span class="n">g_tierra</span><span class="p">,</span>   <span class="mi">1</span><span class="p">),</span> <span class="s2">&quot;N&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  Marte:   &quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">tu_masa</span> <span class="o">*</span> <span class="n">g_marte</span><span class="p">,</span>    <span class="mi">1</span><span class="p">),</span> <span class="s2">&quot;N&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  Jupiter: &quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">tu_masa</span> <span class="o">*</span> <span class="n">g_jupiter</span><span class="p">,</span>  <span class="mi">1</span><span class="p">),</span> <span class="s2">&quot;N&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  Luna:    &quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">tu_masa</span> <span class="o">*</span> <span class="n">g_luna</span><span class="p">,</span>     <span class="mi">1</span><span class="p">),</span> <span class="s2">&quot;N&quot;</span><span class="p">)</span>
+</pre></div>
 </div>
 </section>
 </section>
@@ -622,23 +565,11 @@ print(»  En la Luna: «, round(tu_masa * gravedad_luna,     1), «N»)</div></p
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">🔬 Ejemplos — Módulo 1</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplo-1-velocidad-de-la-luz-en-el-sistema-solar">Ejemplo 1 — Velocidad de la luz en el Sistema Solar</a></li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#calculamos-el-tiempo-en-minutos-para-cada-planeta">Calculamos el tiempo en minutos para cada planeta</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplo-2-conversion-de-temperatura">Ejemplo 2 — Conversión de temperatura</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplo-3-energia-cinetica-de-un-objeto">Ejemplo 3 — Energía cinética de un objeto</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplo-3-energia-cinetica">Ejemplo 3 — Energía cinética</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplo-4-peso-en-otros-planetas">Ejemplo 4 — Peso en otros planetas</a></li>
 </ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#una-pelota-de-tenis-en-un-partido">Una pelota de tenis en un partido</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#un-auto-en-la-autopista">Un auto en la autopista</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#la-estacion-espacial-internacional">La Estación Espacial Internacional</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplo-4-calculo-de-peso-en-otros-planetas">Ejemplo 4 — Cálculo de peso en otros planetas</a></li>
-</ul>
-</li>
-</ul>
-
   </nav></div>
 
 </div></div>
