@@ -1,0 +1,17 @@
+format: jb-book
+root: intro
+parts:
+  - caption: "Antes de empezar"
+    chapters:
+      - file: modulos/00_setup/index
+        title: "🔧 Configuración"
+  - caption: "Módulo 1 · Introducción a Python"
+    chapters:
+      - file: modulos/01_introduccion/index
+        title: "📖 Teoría"
+      - file: modulos/01_introduccion/ejemplos
+        title: "🔬 Ejemplos"
+      - file: modulos/01_introduccion/ejercicios
+        title: "✏️ Ejercicios"
+      - file: modulos/01_introduccion/extras
+        title: "🏆 Retos Extra"
