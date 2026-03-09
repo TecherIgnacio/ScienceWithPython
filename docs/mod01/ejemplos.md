@@ -39,11 +39,11 @@ t_marte    = (marte    / velocidad_luz) / 60
 t_jupiter  = (jupiter  / velocidad_luz) / 60
 
 print("Tiempo que tarda la luz en llegar al Sol:")
-print("  Mercurio:", round(t_mercurio, 2), "minutos")
-print("  Venus:   ", round(t_venus,    2), "minutos")
-print("  Tierra:  ", round(t_tierra,   2), "minutos")
-print("  Marte:   ", round(t_marte,    2), "minutos")
-print("  Jupiter: ", round(t_jupiter,  2), "minutos")
+print("  Mercurio:", t_mercurio, "minutos")
+print("  Venus:   ", t_venus, "minutos")
+print("  Tierra:  ", t_tierra, "minutos")
+print("  Marte:   ", t_marte, "minutos")
+print("  Jupiter: ", t_jupiter, "minutos")
 ```
 
 ---
@@ -106,8 +106,8 @@ vel_iss  = 7660    # m/s
 ek_iss   = 0.5 * masa_iss * vel_iss ** 2
 
 print("Energia cinetica:")
-print("  Pelota de tenis:", round(ek_pelota, 1), "J")
-print("  Auto a 100 km/h:", round(ek_auto,   1), "J")
+print("  Pelota de tenis:", ek_pelota, "J")
+print("  Auto a 100 km/h:", ek_auto, "J")
 print("  ISS en orbita:  ", ek_iss,             "J")
 ```
 
@@ -134,10 +134,10 @@ g_jupiter  = 24.79
 g_luna     = 1.62
 
 print("Con", tu_masa, "kg, tu peso seria:")
-print("  Mercurio:", round(tu_masa * g_mercurio, 1), "N")
-print("  Venus:   ", round(tu_masa * g_venus,    1), "N")
-print("  Tierra:  ", round(tu_masa * g_tierra,   1), "N")
-print("  Marte:   ", round(tu_masa * g_marte,    1), "N")
-print("  Jupiter: ", round(tu_masa * g_jupiter,  1), "N")
-print("  Luna:    ", round(tu_masa * g_luna,     1), "N")
+print("  Mercurio:", tu_masa * g_mercurio, "N")
+print("  Venus:   ", tu_masa * g_venus, "N")
+print("  Tierra:  ", tu_masa * g_tierra, "N")
+print("  Marte:   ", tu_masa * g_marte, "N")
+print("  Jupiter: ", tu_masa * g_jupiter, "N")
+print("  Luna:    ", tu_masa * g_luna, "N")
 ```

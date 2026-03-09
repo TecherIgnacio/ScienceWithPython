@@ -82,9 +82,9 @@ area_tierra = pi * radio_tierra ** 2
 area_luna   = pi * radio_luna   ** 2
 veces       = area_tierra / area_luna
 
-print("Area Tierra:", round(area_tierra, 0), "km²")
-print("Area Luna:  ", round(area_luna,   0), "km²")
-print("La Tierra es", round(veces, 1), "veces mas grande")
+print("Area Tierra:", area_tierra, "km²")
+print("Area Luna:  ", area_luna, "km²")
+print("La Tierra es", veces, "veces mas grande")
 ```
 
 ---

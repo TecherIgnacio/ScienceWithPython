@@ -112,6 +112,8 @@ print("Temperatura promedio:", temperatura_C, "C")
 | `float` | <span class="lang-es">Número decimal</span><span class="lang-en">Decimal number</span> | `3.14`, `9.8` |
 | `str` | <span class="lang-es">Texto</span><span class="lang-en">Text</span> | `"Tierra"` |
 
+Esto es sumamente importante cuando queremos, por ejemplo, 
+
 ```python
 # @browser
 anio = 2025                # int
