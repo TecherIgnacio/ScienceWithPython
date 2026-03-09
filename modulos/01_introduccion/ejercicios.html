@@ -1,0 +1,718 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="es" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>✏️ Ejercicios — Módulo 1 &#8212; Ciencia con Python</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Haz clic para mostrar';</script>
+    <script>let toggleHintHide = 'Haz clic para ocultar';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'modulos/01_introduccion/ejercicios';</script>
+    <link rel="index" title="Índice" href="../../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../../search.html" />
+    <link rel="next" title="🏆 Retos Extra — Módulo 1" href="extras.html" />
+    <link rel="prev" title="🔬 Ejemplos — Módulo 1" href="ejemplos.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="es"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Saltar al contenido principal</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Volver arriba</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Advertencia de versión"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Ciencia con Python</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Ciencia con Python 🚀
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Antes de empezar</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../00_setup/index.html">🔧 Configuración</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Módulo 1 · Introducción a Python</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="index.html">📖 Teoría</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ejemplos.html">🔬 Ejemplos — Módulo 1</a></li>
+
+
+
+
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">✏️ Ejercicios — Módulo 1</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="extras.html">🏆 Retos Extra — Módulo 1</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Descarga esta pagina">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/modulos/01_introduccion/ejercicios.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Descargar archivo fuente"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Imprimir en PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Modo de pantalla completa"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="claro/oscuro" aria-label="claro/oscuro" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>✏️ Ejercicios — Módulo 1</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contenido </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">✏️ Ejercicios — Módulo 1</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicio-1-tu-primera-presentacion">🌐 Ejercicio 1 — Tu primera presentación</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicio-2-calculadora-de-velocidad">🌐 Ejercicio 2 — Calculadora de velocidad</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#primero-converti-los-dias-a-horas-1-dia-24-horas">Primero convertí los días a horas (1 día = 24 horas)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#ahora-calcula-la-velocidad-en-km-h">Ahora calculá la velocidad en km/h</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicio-3-area-de-un-circulo">🌐 Ejercicio 3 — Área de un círculo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicio-4-conversion-de-unidades-astronomicas">💻 Ejercicio 4 — Conversión de unidades astronómicas</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#distancias-al-sol-en-unidades-astronomicas-ua">Distancias al Sol en Unidades Astronómicas (UA)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#convertir-a-kilometros">Convertir a kilómetros</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicio-5-segundo-por-segundo">💻 Ejercicio 5 — Segundo por segundo</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-y-en-marte-un-ano-en-marte-dura-687-dias-terrestres">Bonus: ¿Y en Marte? Un año en Marte dura 687 días terrestres</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="ejercicios-modulo-1">
+<h1>✏️ Ejercicios — Módulo 1<a class="headerlink" href="#ejercicios-modulo-1" title="Permalink to this heading">#</a></h1>
+<div class="lang-es">
+<p>Es hora de practicar. Vas a encontrar ejercicios de dos tipos:</p>
+</div>
+<div class="lang-en">
+<p>Time to practice. You’ll find two types of exercises:</p>
+</div>
+<div class="hybrid-info">
+  <div class="hybrid-badge browser">🌐 <span class="lang-es">En el navegador — editá y ejecutá directamente</span><span class="lang-en">In the browser — edit and run directly</span></div>
+  <div class="hybrid-badge local">💻 <span class="lang-es">En tu PC — descargá el archivo y ejecutalo</span><span class="lang-en">On your PC — download the file and run it</span></div>
+</div>
+<hr class="docutils" />
+<section id="ejercicio-1-tu-primera-presentacion">
+<h2>🌐 Ejercicio 1 — Tu primera presentación<a class="headerlink" href="#ejercicio-1-tu-primera-presentacion" title="Permalink to this heading">#</a></h2>
+<div class="lang-es">
+<p>Modificá el código para que imprima <strong>tu nombre</strong>, tu <strong>edad</strong> y tu <strong>planeta favorito</strong>.</p>
+</div>
+<div class="lang-en">
+<p>Modify the code to print <strong>your name</strong>, your <strong>age</strong>, and your <strong>favorite planet</strong>.</p>
+</div>
+<div class="py-interactive" data-mode="browser"># Completá con tus datos
+nombre  = "..."   # Cambiá por tu nombre
+edad    = 0       # Cambiá por tu edad
+planeta = "..."   # Cambiá por tu planeta favorito
+<p>print(«Hola, me llamo», nombre)
+print(«Tengo», edad, «años»)
+print(«Mi planeta favorito es», planeta)</div></p>
+</section>
+<hr class="docutils" />
+<section id="ejercicio-2-calculadora-de-velocidad">
+<h2>🌐 Ejercicio 2 — Calculadora de velocidad<a class="headerlink" href="#ejercicio-2-calculadora-de-velocidad" title="Permalink to this heading">#</a></h2>
+<div class="lang-es">
+<p>La velocidad se calcula como: <strong>velocidad = distancia / tiempo</strong></p>
+<p>Completá el código para calcular la velocidad promedio de una nave espacial
+que recorre 384.400 km (distancia Tierra-Luna) en 3 días.</p>
+</div>
+<div class="lang-en">
+<p>Speed is calculated as: <strong>speed = distance / time</strong></p>
+<p>Complete the code to calculate the average speed of a spacecraft
+that travels 384,400 km (Earth-Moon distance) in 3 days.</p>
+</div>
+<div class="py-interactive" data-mode="browser">distancia_km = 384400  # km (distancia Tierra-Luna)
+tiempo_dias  = 3       # días
+</section>
+</section>
+<section id="primero-converti-los-dias-a-horas-1-dia-24-horas">
+<h1>Primero convertí los días a horas (1 día = 24 horas)<a class="headerlink" href="#primero-converti-los-dias-a-horas-1-dia-24-horas" title="Permalink to this heading">#</a></h1>
+<p>tiempo_horas = tiempo_dias * 24</p>
+</section>
+<section id="ahora-calcula-la-velocidad-en-km-h">
+<h1>Ahora calculá la velocidad en km/h<a class="headerlink" href="#ahora-calcula-la-velocidad-en-km-h" title="Permalink to this heading">#</a></h1>
+<p>velocidad = distancia_km / tiempo_horas</p>
+<p>print(«Distancia:», distancia_km, «km»)
+print(«Tiempo:», tiempo_horas, «horas»)
+print(«Velocidad promedio:», velocidad, «km/h»)</div></p>
+<div class="admonition tip">
+<p class="admonition-title">Truco</p>
+<p><span class="lang-es">¿Podés modificar el código para calcular también la velocidad en m/s? (1 km = 1000 m, 1 hora = 3600 s)</span>
+<span class="lang-en">Can you modify the code to also calculate the speed in m/s? (1 km = 1000 m, 1 hour = 3600 s)</span></p>
+</div>
+<hr class="docutils" />
+<section id="ejercicio-3-area-de-un-circulo">
+<h2>🌐 Ejercicio 3 — Área de un círculo<a class="headerlink" href="#ejercicio-3-area-de-un-circulo" title="Permalink to this heading">#</a></h2>
+<div class="lang-es">
+<p>El área de un círculo es: <strong>A = π × r²</strong></p>
+<p>Calculá el área de:</p>
+<ol class="arabic simple">
+<li><p>La Tierra (radio ≈ 6.371 km)</p></li>
+<li><p>La Luna (radio ≈ 1.737 km)</p></li>
+</ol>
+<p>Y encontrá cuántas veces es más grande la sección transversal de la Tierra que la de la Luna.</p>
+</div>
+<div class="lang-en">
+<p>The area of a circle is: <strong>A = π × r²</strong></p>
+<p>Calculate the area of:</p>
+<ol class="arabic simple">
+<li><p>Earth (radius ≈ 6,371 km)</p></li>
+<li><p>The Moon (radius ≈ 1,737 km)</p></li>
+</ol>
+<p>And find how many times larger Earth’s cross-section is compared to the Moon’s.</p>
+</div>
+<div class="py-interactive" data-mode="browser">pi = 3.14159265
+<p>radio_tierra = 6371   # km
+radio_luna   = 1737   # km</p>
+<p>area_tierra = pi * radio_tierra ** 2
+area_luna   = pi * radio_luna   ** 2</p>
+<p>veces = area_tierra / area_luna</p>
+<p>print(«Área de la sección de la Tierra:», round(area_tierra, 0), «km²»)
+print(«Área de la sección de la Luna:  «, round(area_luna,   0), «km²»)
+print(«La Tierra es», round(veces, 1), «veces más grande que la Luna»)</div></p>
+</section>
+<hr class="docutils" />
+<section id="ejercicio-4-conversion-de-unidades-astronomicas">
+<h2>💻 Ejercicio 4 — Conversión de unidades astronómicas<a class="headerlink" href="#ejercicio-4-conversion-de-unidades-astronomicas" title="Permalink to this heading">#</a></h2>
+<div class="lang-es">
+<p>Una <strong>Unidad Astronómica (UA)</strong> es la distancia promedio de la Tierra al Sol: <strong>149.597.870 km</strong>.
+Es la unidad que se usa para medir distancias dentro del Sistema Solar.</p>
+<p>Creá un programa en tu PC que:</p>
+<ol class="arabic simple">
+<li><p>Defina la distancia de cada planeta al Sol en UA</p></li>
+<li><p>Convierta cada distancia a kilómetros</p></li>
+<li><p>Imprima los resultados</p></li>
+</ol>
+</div>
+<div class="lang-en">
+<p>An <strong>Astronomical Unit (AU)</strong> is the average distance from Earth to the Sun: <strong>149,597,870 km</strong>.
+It’s the unit used to measure distances within the Solar System.</p>
+<p>Create a program on your PC that:</p>
+<ol class="arabic simple">
+<li><p>Defines each planet’s distance from the Sun in AU</p></li>
+<li><p>Converts each distance to kilometers</p></li>
+<li><p>Prints the results</p></li>
+</ol>
+</div>
+<div class="py-interactive" data-mode="local">
+# Ejercicio 4 — Conversión de Unidades Astronómicas
+# Ejecutá este archivo en tu PC con: python ejercicio4.py
+<p>UA_en_km = 149597870  # 1 UA en kilómetros</p>
+</section>
+</section>
+<section id="distancias-al-sol-en-unidades-astronomicas-ua">
+<h1>Distancias al Sol en Unidades Astronómicas (UA)<a class="headerlink" href="#distancias-al-sol-en-unidades-astronomicas-ua" title="Permalink to this heading">#</a></h1>
+<p>mercurio_UA = 0.39
+venus_UA    = 0.72
+tierra_UA   = 1.00
+marte_UA    = 1.52
+jupiter_UA  = 5.20
+saturno_UA  = 9.58</p>
+</section>
+<section id="convertir-a-kilometros">
+<h1>Convertir a kilómetros<a class="headerlink" href="#convertir-a-kilometros" title="Permalink to this heading">#</a></h1>
+<p>mercurio_km = mercurio_UA * UA_en_km
+venus_km    = venus_UA    * UA_en_km
+tierra_km   = tierra_UA   * UA_en_km
+marte_km    = marte_UA    * UA_en_km
+jupiter_km  = jupiter_UA  * UA_en_km
+saturno_km  = saturno_UA  * UA_en_km</p>
+<p>print(«Planeta     | UA    | Kilómetros»)
+print(«-» * 40)
+print(«Mercurio    |», mercurio_UA, «|», mercurio_km)
+print(«Venus       |», venus_UA,   «|», venus_km)
+print(«Tierra      |», tierra_UA,  «|», tierra_km)
+print(«Marte       |», marte_UA,   «|», marte_km)
+print(«Júpiter     |», jupiter_UA, «|», jupiter_km)
+print(«Saturno     |», saturno_UA, «|», saturno_km)</p>
+</div>
+<hr class="docutils" />
+<section id="ejercicio-5-segundo-por-segundo">
+<h2>💻 Ejercicio 5 — Segundo por segundo<a class="headerlink" href="#ejercicio-5-segundo-por-segundo" title="Permalink to this heading">#</a></h2>
+<div class="lang-es">
+<p>Muchos procesos científicos se miden en unidades de tiempo muy específicas.
+Creá un programa en tu PC que tome una cantidad de <strong>segundos</strong> y la convierta a:</p>
+<ul class="simple">
+<li><p>Minutos</p></li>
+<li><p>Horas</p></li>
+<li><p>Días</p></li>
+</ul>
+<p>Usá como ejemplo la duración de un año en la Tierra: <strong>31.536.000 segundos</strong>.</p>
+</div>
+<div class="lang-en">
+<p>Many scientific processes are measured in very specific time units.
+Create a program on your PC that takes a number of <strong>seconds</strong> and converts it to:</p>
+<ul class="simple">
+<li><p>Minutes</p></li>
+<li><p>Hours</p></li>
+<li><p>Days</p></li>
+</ul>
+<p>Use as an example the length of a year on Earth: <strong>31,536,000 seconds</strong>.</p>
+</div>
+<div class="py-interactive" data-mode="local">
+# Ejercicio 5 — Conversor de tiempo
+# Ejecutá este archivo con: python ejercicio5.py
+<p>segundos_totales = 31536000  # 1 año en la Tierra</p>
+<p>minutos = segundos_totales / 60
+horas   = minutos / 60
+dias    = horas / 24</p>
+<p>print(«Un año en la Tierra equivale a:»)
+print(»  Segundos:», segundos_totales)
+print(»  Minutos: «, minutos)
+print(»  Horas:   «, horas)
+print(»  Días:    «, dias)</p>
+</section>
+</section>
+<section id="bonus-y-en-marte-un-ano-en-marte-dura-687-dias-terrestres">
+<h1>Bonus: ¿Y en Marte? Un año en Marte dura 687 días terrestres<a class="headerlink" href="#bonus-y-en-marte-un-ano-en-marte-dura-687-dias-terrestres" title="Permalink to this heading">#</a></h1>
+<p>anio_marte_dias = 687
+anio_marte_seg  = anio_marte_dias * 24 * 3600</p>
+<p>print()
+print(«Un año en Marte dura:»)
+print(»  Días terrestres:», anio_marte_dias)
+print(»  Segundos:       «, anio_marte_seg)</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p><span class="lang-es">Para ejecutar estos archivos: guardá el código en un archivo <code class="docutils literal notranslate"><span class="pre">.py</span></code>, abrí la terminal en la carpeta donde lo guardaste y escribí <code>python nombre_del_archivo.py</code>. Si no sabés cómo, revisá la sección de <strong>Configuración</strong>.</span>
+<span class="lang-en">To run these files: save the code in a <code class="docutils literal notranslate"><span class="pre">.py</span></code> file, open the terminal in the folder where you saved it, and type <code>python filename.py</code>. If you’re not sure how, review the <strong>Setup</strong> section.</span></p>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./modulos/01_introduccion"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="ejemplos.html"
+       title="página anterior">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">anterior</p>
+        <p class="prev-next-title">🔬 Ejemplos — Módulo 1</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="extras.html"
+       title="siguiente página">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">siguiente</p>
+        <p class="prev-next-title">🏆 Retos Extra — Módulo 1</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contenido
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">✏️ Ejercicios — Módulo 1</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicio-1-tu-primera-presentacion">🌐 Ejercicio 1 — Tu primera presentación</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicio-2-calculadora-de-velocidad">🌐 Ejercicio 2 — Calculadora de velocidad</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#primero-converti-los-dias-a-horas-1-dia-24-horas">Primero convertí los días a horas (1 día = 24 horas)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#ahora-calcula-la-velocidad-en-km-h">Ahora calculá la velocidad en km/h</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicio-3-area-de-un-circulo">🌐 Ejercicio 3 — Área de un círculo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicio-4-conversion-de-unidades-astronomicas">💻 Ejercicio 4 — Conversión de unidades astronómicas</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#distancias-al-sol-en-unidades-astronomicas-ua">Distancias al Sol en Unidades Astronómicas (UA)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#convertir-a-kilometros">Convertir a kilómetros</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicio-5-segundo-por-segundo">💻 Ejercicio 5 — Segundo por segundo</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-y-en-marte-un-ano-en-marte-dura-687-dias-terrestres">Bonus: ¿Y en Marte? Un año en Marte dura 687 días terrestres</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Por Tangrama
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
