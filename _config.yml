@@ -9,10 +9,6 @@ html:
   home_page_in_navbar: true
   use_issues_button: false
   use_repository_button: false
-  extra_css:
-    - assets/css/custom.css
-  extra_js:
-    - assets/js/main.js
 
 parse:
   myst_enable_extensions:
