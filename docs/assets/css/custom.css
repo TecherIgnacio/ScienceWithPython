@@ -233,16 +233,16 @@ code, pre, kbd,
 
 /* Visibilidad por idioma */
 .lang-en { display: none; }
-body.lang-es .lang-es { display: block; }
-body.lang-es .lang-en { display: none; }
-body.lang-en .lang-es { display: none; }
-body.lang-en .lang-en { display: block; }
+body.lang-es .lang-es { display: block !important; }
+body.lang-es .lang-en { display: none !important; }
+body.lang-en .lang-es { display: none !important; }
+body.lang-en .lang-en { display: block !important; }
 
 span.lang-en { display: none; }
-body.lang-es span.lang-en { display: none; }
-body.lang-es span.lang-es { display: inline; }
-body.lang-en span.lang-es { display: none; }
-body.lang-en span.lang-en { display: inline; }
+body.lang-es span.lang-en { display: none !important; }
+body.lang-es span.lang-es { display: inline !important; }
+body.lang-en span.lang-es { display: none !important; }
+body.lang-en span.lang-en { display: inline !important; }
 
 
 /* =====================================================
