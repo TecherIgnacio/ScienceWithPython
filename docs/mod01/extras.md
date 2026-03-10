@@ -1,4 +1,4 @@
-# 🏆 Retos Extra — Módulo 1
+# 🏆 <span class="lang-es">Retos Extra — Módulo 1</span><span class="lang-en">Extra Challenges — Module 1</span>
 
 <div class="lang-es" markdown="1">
 ¿Terminaste los ejercicios? Estos retos son más desafiantes. ¡Intentá resolverlos sin ayuda!
@@ -9,7 +9,7 @@ Finished the exercises? These challenges are harder. Try to solve them on your o
 
 ---
 
-## 🏆 Reto 1 — Velocidad de escape
+## 🏆 <span class="lang-es">Reto 1 — Velocidad de escape</span><span class="lang-en">Challenge 1 — Escape Velocity</span>
 
 <div class="lang-es" markdown="1">
 La **velocidad de escape** es la velocidad mínima para alejarse de un planeta: **v = √(2 × G × M / R)**
@@ -46,7 +46,7 @@ radio_tierra = 6.371e6
 
 ---
 
-## 🏆 Reto 2 — Pitágoras en el espacio
+## 🏆 <span class="lang-es">Reto 2 — Pitágoras en el espacio</span><span class="lang-en">Challenge 2 — Pythagorean Theorem in Space</span>
 
 <div class="lang-es" markdown="1">
 Dos sondas parten desde la Tierra. La sonda A viaja 450.000 km al norte.
@@ -72,7 +72,7 @@ dist_b = 320000  # km (este)
 
 ---
 
-## 🏆 Reto 3 — Densidad de planetas
+## 🏆 <span class="lang-es">Reto 3 — Densidad de planetas</span><span class="lang-en">Challenge 3 — Planet Density</span>
 
 <div class="lang-es" markdown="1">
 **densidad = masa / volumen**, donde el volumen de una esfera es **V = (4/3) × π × r³**

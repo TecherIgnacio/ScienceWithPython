@@ -1,4 +1,4 @@
-# 🔬 Ejemplos — Módulo 1
+# 🔬 <span class="lang-es">Ejemplos — Módulo 1</span><span class="lang-en">Examples — Module 1</span>
 
 <div class="lang-es" markdown="1">
 Veamos cómo aplicar `print()`, variables y operaciones para resolver preguntas
@@ -11,7 +11,7 @@ scientific questions. All examples are runnable!
 
 ---
 
-## Ejemplo 1 — Velocidad de la luz en el Sistema Solar
+## <span class="lang-es">Ejemplo 1 — Velocidad de la luz</span><span class="lang-en">Example 1 — Speed of Light</span>
 
 <div class="lang-es" markdown="1">
 La velocidad de la luz es de **300.000 km/s**. Podemos calcular cuánto tarda
@@ -48,7 +48,7 @@ print("  Jupiter: ", t_jupiter, "minutos")
 
 ---
 
-## Ejemplo 2 — Conversión de temperatura
+## <span class="lang-es">Ejemplo 2 — Conversión de temperatura</span><span class="lang-en">Example 2 — Temperature Conversion</span>
 
 <div class="lang-es" markdown="1">
 En ciencia se usan tres escalas: **Celsius**, **Fahrenheit** y **Kelvin**.
@@ -79,7 +79,7 @@ print("Kelvin:    ", kelvin,     "K")
 
 ---
 
-## Ejemplo 3 — Energía cinética
+## <span class="lang-es">Ejemplo 3 — Energía cinética</span><span class="lang-en">Example 3 — Kinetic Energy</span>
 
 <div class="lang-es" markdown="1">
 La **energía cinética** es la energía de un objeto en movimiento: **E = ½ × m × v²**
@@ -113,7 +113,7 @@ print("  ISS en orbita:  ", ek_iss,             "J")
 
 ---
 
-## Ejemplo 4 — Peso en otros planetas
+## <span class="lang-es">Ejemplo 4 — Peso en otros planetas</span><span class="lang-en">Example 4 — Weight on Other Planets</span>
 
 <div class="lang-es" markdown="1">
 Tu peso cambia según la gravedad del planeta. **Peso = masa × gravedad**

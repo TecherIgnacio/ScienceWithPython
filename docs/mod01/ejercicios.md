@@ -1,4 +1,4 @@
-# ✏️ Ejercicios — Módulo 1
+# ✏️ <span class="lang-es">Ejercicios — Módulo 1</span><span class="lang-en">Exercises — Module 1</span>
 
 <div class="hybrid-info">
   <div class="hybrid-badge browser">🌐 <span class="lang-es">En el navegador</span><span class="lang-en">In the browser</span></div>
@@ -7,7 +7,7 @@
 
 ---
 
-## 🌐 Ejercicio 1 — Tu primera presentación
+## 🌐 <span class="lang-es">Ejercicio 1 — Tu primera presentación</span><span class="lang-en">Exercise 1 — Your Introduction</span>
 
 <div class="lang-es" markdown="1">
 Modificá el código para imprimir **tu nombre**, tu **edad** y tu **planeta favorito**.
@@ -29,7 +29,7 @@ print("Mi planeta favorito es", planeta)
 
 ---
 
-## 🌐 Ejercicio 2 — Calculadora de velocidad
+## 🌐 <span class="lang-es">Ejercicio 2 — Calculadora de velocidad</span><span class="lang-en">Exercise 2 — Speed Calculator</span>
 
 <div class="lang-es" markdown="1">
 **velocidad = distancia / tiempo**
@@ -61,7 +61,7 @@ print("Velocidad:", velocidad, "km/h")
 
 ---
 
-## 🌐 Ejercicio 3 — Área de un círculo
+## 🌐 <span class="lang-es">Ejercicio 3 — Área de un círculo</span><span class="lang-en">Exercise 3 — Area of a Circle</span>
 
 <div class="lang-es" markdown="1">
 **A = π × r²** — Calculá el área de la Tierra (r=6.371 km) y la Luna (r=1.737 km),
@@ -89,7 +89,7 @@ print("La Tierra es", veces, "veces mas grande")
 
 ---
 
-## 💻 Ejercicio 4 — Unidades Astronómicas
+## 💻 <span class="lang-es">Ejercicio 4 — Unidades Astronómicas</span><span class="lang-en">Exercise 4 — Astronomical Units</span>
 
 <div class="lang-es" markdown="1">
 Una **UA** (Unidad Astronómica) = distancia Tierra-Sol = 149.597.870 km.
@@ -122,7 +122,7 @@ print("Jupiter     |", jupiter_UA, "|", jupiter_UA * UA_en_km)
 
 ---
 
-## 💻 Ejercicio 5 — Conversor de tiempo
+## 💻 <span class="lang-es">Ejercicio 5 — Conversor de tiempo</span><span class="lang-en">Exercise 5 — Time Converter</span>
 
 <div class="lang-es" markdown="1">
 Creá un programa que convierta 31.536.000 segundos (1 año terrestre) a

@@ -1,4 +1,4 @@
-# 🐍 Módulo 1 — Introducción a Python
+# 🐍 <span class="lang-es">Módulo 1 — Introducción a Python</span><span class="lang-en">Module 1 — Python Introduction</span>
 
 <div class="lang-es" markdown="1">
 En este módulo vas a aprender los tres bloques fundamentales de cualquier programa Python:
@@ -13,7 +13,7 @@ With just these three elements you can already solve real scientific problems.
 
 ---
 
-## 1. La función `print()`
+## 1. <span class="lang-es">La función `print()`</span><span class="lang-en">The `print()` function</span>
 
 <div class="lang-es" markdown="1">
 `print()` es la forma más básica de mostrar información en pantalla.
@@ -25,7 +25,7 @@ Think of `print` as telling the computer: **"show this"**.
 </div>
 
 <div class="lang-es">Hacé clic en <strong>▶ Ejecutar</strong> para ver el resultado:</div>
-<div class="lang-en">Click <strong>▶ Ejecutar</strong> to see the result:</div>
+<div class="lang-en">Click <strong>▶ Run</strong> to see the result:</div>
 
 ```python
 # @browser
@@ -41,7 +41,7 @@ Observá que podés imprimir **texto** (entre comillas) y también **números** 
 Notice that you can print **text** (with quotes) and also **numbers** (without quotes).
 </div>
 
-### `print()` con varios valores
+### <span class="lang-es">`print()` con varios valores</span><span class="lang-en">`print()` with multiple values</span>
 
 <div class="lang-es" markdown="1">
 Podés pasarle varios valores separados por comas y los mostrará juntos:
@@ -104,15 +104,13 @@ print("Temperatura promedio:", temperatura_C, "C")
 
 </div>
 
-### Tipos de datos / Data Types
+### <span class="lang-es">Tipos de datos</span><span class="lang-en">Data Types</span>
 
 | Tipo | <span class="lang-es">Descripción</span><span class="lang-en">Description</span> | <span class="lang-es">Ejemplo</span><span class="lang-en">Example</span> |
 |---|---|---|
 | `int` | <span class="lang-es">Número entero</span><span class="lang-en">Whole number</span> | `42`, `-7` |
 | `float` | <span class="lang-es">Número decimal</span><span class="lang-en">Decimal number</span> | `3.14`, `9.8` |
 | `str` | <span class="lang-es">Texto</span><span class="lang-en">Text</span> | `"Tierra"` |
-
-Esto es sumamente importante cuando queremos, por ejemplo, 
 
 ```python
 # @browser
@@ -129,7 +127,7 @@ print(nombre_planeta, "— Gravedad:", gravedad, "m/s² — Año:", anio)
 
 ---
 
-## 3. Operaciones Aritméticas / Arithmetic Operations
+## 3. <span class="lang-es">Operaciones Aritméticas</span><span class="lang-en">Arithmetic Operations</span>
 
 | Operador | <span class="lang-es">Operación</span><span class="lang-en">Operation</span> | <span class="lang-es">Ejemplo</span><span class="lang-en">Example</span> | <span class="lang-es">Resultado</span><span class="lang-en">Result</span> |
 |---|---|---|---|
@@ -151,7 +149,7 @@ print(15 // 4)  # Division entera → solo la parte entera
 print(2 ** 10)  # 2 elevado a la 10
 ```
 
-### Orden de operaciones / Order of Operations
+### <span class="lang-es">Orden de operaciones</span><span class="lang-en">Order of Operations</span>
 
 ```python
 # @browser
@@ -163,7 +161,7 @@ print(10 / (2 + 3)) # = 2.0
 
 ---
 
-## Juntando todo / Putting It All Together
+## <span class="lang-es">Juntando todo</span><span class="lang-en">Putting It All Together</span>
 
 <div class="lang-es" markdown="1">
 Usemos los tres conceptos para responder una pregunta científica real:
