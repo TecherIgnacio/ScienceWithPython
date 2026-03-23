@@ -1,0 +1,1202 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Aprende simulación científica con Python">
+      
+      
+        <meta name="author" content="Tangrama">
+      
+      
+        <link rel="canonical" href="https://techerignacio.github.io/ScienceWithPython/mod02/">
+      
+      
+        <link rel="prev" href="../mod01/extras/">
+      
+      
+        <link rel="next" href="ejemplos/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>📖 Teoría - Ciencia con Python</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../assets/css/custom.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#modulo-2-condicionalesmodule-2-conditionals" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="Ciencia con Python" class="md-header__button md-logo" aria-label="Ciencia con Python" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Ciencia con Python
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              📖 Teoría
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Inicio
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../setup/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  🔧 Configuración
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../mod01/" class="md-tabs__link">
+          
+  
+  
+  🐍 Módulo 1 · Introducción
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  🔀 Módulo 2 · Condicionales
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Ciencia con Python" class="md-nav__button md-logo" aria-label="Ciencia con Python" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Ciencia con Python
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔧 Configuración
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🐍 Módulo 1 · Introducción
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🐍 Módulo 1 · Introducción
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mod01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📖 Teoría
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mod01/ejemplos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔬 Ejemplos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mod01/ejercicios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ✏️ Ejercicios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mod01/extras/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🏆 Retos Extra
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔀 Módulo 2 · Condicionales
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🔀 Módulo 2 · Condicionales
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📖 Teoría
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📖 Teoría
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-operadores-de-comparacioncomparison-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Operadores de comparaciónComparison Operators
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-if-elseif-else" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. if / elseif / else
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-elif-multiples-condicioneselif-multiple-conditions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. elif — múltiples condicioneselif — multiple conditions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-combinar-condicionescombining-conditions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Combinar condicionesCombining conditions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#juntando-todoputting-it-all-together" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Juntando todoPutting It All Together
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ejemplos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔬 Ejemplos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ejercicios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ✏️ Ejercicios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="extras/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🏆 Retos Extra
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-operadores-de-comparacioncomparison-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Operadores de comparaciónComparison Operators
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-if-elseif-else" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. if / elseif / else
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-elif-multiples-condicioneselif-multiple-conditions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. elif — múltiples condicioneselif — multiple conditions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-combinar-condicionescombining-conditions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Combinar condicionesCombining conditions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#juntando-todoputting-it-all-together" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Juntando todoPutting It All Together
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="modulo-2-condicionalesmodule-2-conditionals">🔀 <span class="lang-es">Módulo 2 — Condicionales</span><span class="lang-en">Module 2 — Conditionals</span><a class="headerlink" href="#modulo-2-condicionalesmodule-2-conditionals" title="Permanent link">&para;</a></h1>
+<div class="lang-es">
+<p>Hasta ahora tu código siempre hace lo mismo, sin importar los datos.
+Con los <strong>condicionales</strong> podés hacer que el programa tome decisiones:
+"si pasa esto, hacé aquello; si no, hacé lo otro".</p>
+</div>
+<div class="lang-en">
+<p>So far your code always does the same thing, no matter the data.
+With <strong>conditionals</strong> you can make the program take decisions:
+"if this happens, do that; otherwise, do something else".</p>
+</div>
+<hr />
+<h2 id="1-operadores-de-comparacioncomparison-operators">1. <span class="lang-es">Operadores de comparación</span><span class="lang-en">Comparison Operators</span><a class="headerlink" href="#1-operadores-de-comparacioncomparison-operators" title="Permanent link">&para;</a></h2>
+<div class="lang-es">
+<p>Antes de tomar decisiones, necesitamos <strong>comparar</strong> valores.
+Estos operadores devuelven <code>True</code> (verdadero) o <code>False</code> (falso):</p>
+</div>
+<div class="lang-en">
+<p>Before making decisions, we need to <strong>compare</strong> values.
+These operators return <code>True</code> or <code>False</code>:</p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Operador</th>
+<th><span class="lang-es">Significado</span><span class="lang-en">Meaning</span></th>
+<th><span class="lang-es">Ejemplo</span><span class="lang-en">Example</span></th>
+<th><span class="lang-es">Resultado</span><span class="lang-en">Result</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>==</code></td>
+<td><span class="lang-es">igual a</span><span class="lang-en">equal to</span></td>
+<td><code>5 == 5</code></td>
+<td><code>True</code></td>
+</tr>
+<tr>
+<td><code>!=</code></td>
+<td><span class="lang-es">distinto de</span><span class="lang-en">not equal to</span></td>
+<td><code>5 != 3</code></td>
+<td><code>True</code></td>
+</tr>
+<tr>
+<td><code>&gt;</code></td>
+<td><span class="lang-es">mayor que</span><span class="lang-en">greater than</span></td>
+<td><code>8 &gt; 3</code></td>
+<td><code>True</code></td>
+</tr>
+<tr>
+<td><code>&lt;</code></td>
+<td><span class="lang-es">menor que</span><span class="lang-en">less than</span></td>
+<td><code>2 &lt; 1</code></td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>&gt;=</code></td>
+<td><span class="lang-es">mayor o igual</span><span class="lang-en">greater or equal</span></td>
+<td><code>5 &gt;= 5</code></td>
+<td><code>True</code></td>
+</tr>
+<tr>
+<td><code>&lt;=</code></td>
+<td><span class="lang-es">menor o igual</span><span class="lang-en">less or equal</span></td>
+<td><code>3 &lt;= 7</code></td>
+<td><code>True</code></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><span class="c1"># @browser</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">10</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">10</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">10</span> <span class="o">==</span> <span class="mi">10</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">10</span> <span class="o">!=</span> <span class="mi">5</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mf">9.8</span> <span class="o">&gt;=</span> <span class="mf">9.8</span><span class="p">)</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">True / False</p>
+<p><span class="lang-es">En Python, <code>True</code> y <code>False</code> se llaman <strong>booleanos</strong> (<code>bool</code>). Son el resultado de cualquier comparación.</span>
+<span class="lang-en">In Python, <code>True</code> and <code>False</code> are called <strong>booleans</strong> (<code>bool</code>). They are the result of any comparison.</span></p>
+</div>
+<hr />
+<h2 id="2-if-elseif-else">2. <span class="lang-es">if / else</span><span class="lang-en">if / else</span><a class="headerlink" href="#2-if-elseif-else" title="Permanent link">&para;</a></h2>
+<div class="lang-es">
+<p>La estructura <code>if</code> ejecuta un bloque de código <strong>solo si</strong> la condición es <code>True</code>.
+El bloque <code>else</code> se ejecuta cuando la condición es <code>False</code>.</p>
+<div class="highlight"><pre><span></span><code>if condición:
+    # código si es verdadero
+else:
+    # código si es falso
+</code></pre></div>
+<p><strong>Importante</strong>: el código dentro del <code>if</code> va con <strong>4 espacios de sangría</strong>.</p>
+</div>
+<div class="lang-en">
+<p>The <code>if</code> statement executes a block of code <strong>only if</strong> the condition is <code>True</code>.
+The <code>else</code> block runs when the condition is <code>False</code>.</p>
+<div class="highlight"><pre><span></span><code>if condition:
+    # code if true
+else:
+    # code if false
+</code></pre></div>
+<p><strong>Important</strong>: the code inside <code>if</code> must be <strong>indented with 4 spaces</strong>.</p>
+</div>
+<div class="highlight"><pre><span></span><code><span class="c1"># @browser</span>
+<span class="n">temperatura</span> <span class="o">=</span> <span class="o">-</span><span class="mi">20</span>  <span class="c1"># °C</span>
+
+<span class="k">if</span> <span class="n">temperatura</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El agua puede estar liquida&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El agua esta congelada&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="lang-es">
+<p>Cambiá el valor de <code>temperatura</code> y volvé a ejecutar. Probá con <code>100</code>, <code>-20</code>, <code>0</code>.</p>
+</div>
+<div class="lang-en">
+<p>Change the value of <code>temperatura</code> and run again. Try <code>100</code>, <code>-20</code>, <code>0</code>.</p>
+</div>
+<hr />
+<h2 id="3-elif-multiples-condicioneselif-multiple-conditions">3. <span class="lang-es">elif — múltiples condiciones</span><span class="lang-en">elif — multiple conditions</span><a class="headerlink" href="#3-elif-multiples-condicioneselif-multiple-conditions" title="Permanent link">&para;</a></h2>
+<div class="lang-es">
+<p>Cuando hay más de dos posibilidades, usamos <code>elif</code> (abreviatura de "else if"):</p>
+</div>
+<div class="lang-en">
+<p>When there are more than two possibilities, we use <code>elif</code> (short for "else if"):</p>
+</div>
+<div class="highlight"><pre><span></span><code><span class="c1"># @browser</span>
+<span class="n">gravedad</span> <span class="o">=</span> <span class="mf">3.72</span>  <span class="c1"># Marte (m/s²)</span>
+
+<span class="k">if</span> <span class="n">gravedad</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Gravedad muy baja (luna o asteroide)&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">gravedad</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Gravedad baja (planeta pequeno)&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">gravedad</span> <span class="o">&lt;</span> <span class="mi">12</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Gravedad moderada (planeta terrestre)&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Gravedad alta (gigante gaseoso)&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="lang-es">
+<p>Python evalúa las condiciones <strong>de arriba hacia abajo</strong> y ejecuta solo el primer bloque que sea <code>True</code>. Los demás se ignoran.</p>
+</div>
+<div class="lang-en">
+<p>Python evaluates conditions <strong>from top to bottom</strong> and runs only the first block that is <code>True</code>. The rest are skipped.</p>
+</div>
+<hr />
+<h2 id="4-combinar-condicionescombining-conditions">4. <span class="lang-es">Combinar condiciones</span><span class="lang-en">Combining conditions</span><a class="headerlink" href="#4-combinar-condicionescombining-conditions" title="Permanent link">&para;</a></h2>
+<div class="lang-es">
+<p>Podés combinar varias condiciones usando <code>and</code>, <code>or</code> y <code>not</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Operador</th>
+<th><span class="lang-es">Significado</span><span class="lang-en">Meaning</span></th>
+<th><span class="lang-es">Ejemplo</span><span class="lang-en">Example</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>and</code></td>
+<td><span class="lang-es">ambas deben ser True</span><span class="lang-en">both must be True</span></td>
+<td><code>x &gt; 0 and x &lt; 10</code></td>
+</tr>
+<tr>
+<td><code>or</code></td>
+<td><span class="lang-es">al menos una True</span><span class="lang-en">at least one True</span></td>
+<td><code>x &lt; 0 or x &gt; 100</code></td>
+</tr>
+<tr>
+<td><code>not</code></td>
+<td><span class="lang-es">invierte el resultado</span><span class="lang-en">inverts the result</span></td>
+<td><code>not (x == 5)</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="lang-en">
+<p>You can combine multiple conditions using <code>and</code>, <code>or</code>, and <code>not</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Meaning</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>and</code></td>
+<td>both must be True</td>
+<td><code>x &gt; 0 and x &lt; 10</code></td>
+</tr>
+<tr>
+<td><code>or</code></td>
+<td>at least one True</td>
+<td><code>x &lt; 0 or x &gt; 100</code></td>
+</tr>
+<tr>
+<td><code>not</code></td>
+<td>inverts the result</td>
+<td><code>not (x == 5)</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="highlight"><pre><span></span><code><span class="c1"># @browser</span>
+<span class="n">temp_C</span>   <span class="o">=</span> <span class="mi">15</span>
+<span class="n">presion</span>  <span class="o">=</span> <span class="mf">1.0</span>  <span class="c1"># atm (presion terrestre normal)</span>
+
+<span class="k">if</span> <span class="n">temp_C</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">temp_C</span> <span class="o">&lt;</span> <span class="mi">100</span> <span class="ow">and</span> <span class="n">presion</span> <span class="o">&gt;=</span> <span class="mf">0.6</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Condiciones compatibles con agua liquida&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El agua no puede existir en estado liquido&quot;</span><span class="p">)</span>
+</code></pre></div>
+<hr />
+<h2 id="juntando-todoputting-it-all-together"><span class="lang-es">Juntando todo</span><span class="lang-en">Putting It All Together</span><a class="headerlink" href="#juntando-todoputting-it-all-together" title="Permanent link">&para;</a></h2>
+<div class="lang-es">
+<p>¿Puede haber vida en ese planeta? Usemos condiciones para evaluarlo:</p>
+</div>
+<div class="lang-en">
+<p>Could there be life on that planet? Let's use conditions to evaluate it:</p>
+</div>
+<div class="highlight"><pre><span></span><code><span class="c1"># @browser</span>
+<span class="n">nombre</span>      <span class="o">=</span> <span class="s2">&quot;Marte&quot;</span>
+<span class="n">temp_min</span>    <span class="o">=</span> <span class="o">-</span><span class="mi">125</span>  <span class="c1"># °C</span>
+<span class="n">temp_max</span>    <span class="o">=</span> <span class="mi">20</span>    <span class="c1"># °C</span>
+<span class="n">tiene_agua</span>  <span class="o">=</span> <span class="kc">True</span>
+<span class="n">tiene_atm</span>   <span class="o">=</span> <span class="kc">True</span>
+
+<span class="c1"># Condiciones basicas para la vida</span>
+<span class="n">temp_ok</span>  <span class="o">=</span> <span class="n">temp_max</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">temp_min</span> <span class="o">&lt;</span> <span class="mi">50</span>
+<span class="n">vida_posible</span> <span class="o">=</span> <span class="n">temp_ok</span> <span class="ow">and</span> <span class="n">tiene_agua</span> <span class="ow">and</span> <span class="n">tiene_atm</span>
+
+<span class="k">if</span> <span class="n">vida_posible</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">nombre</span><span class="p">,</span> <span class="s2">&quot;: condiciones basicas para la vida PRESENTES&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">nombre</span><span class="p">,</span> <span class="s2">&quot;: condiciones basicas para la vida AUSENTES&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">tiene_agua</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  → Falta agua liquida&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">tiene_atm</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  → Falta atmosfera&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">temp_ok</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  → Temperatura fuera de rango&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="admonition tip">
+<p><span class="lang-es">Cambiá los valores del planeta y experimentá. ¿Qué pasa si <code>tiene_agua = False</code>?</span>
+<span class="lang-en">Change the planet values and experiment. What happens if <code>tiene_agua = False</code>?</span></p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "content.code.copy", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../assets/js/main.js"></script>
+      
+    
+  </body>
+</html>

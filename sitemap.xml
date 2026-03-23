@@ -2,26 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://techerignacio.github.io/ScienceWithPython/</loc>
-         <lastmod>2026-03-10</lastmod>
+         <lastmod>2026-03-23</lastmod>
     </url>
     <url>
          <loc>https://techerignacio.github.io/ScienceWithPython/mod01/</loc>
-         <lastmod>2026-03-10</lastmod>
+         <lastmod>2026-03-23</lastmod>
     </url>
     <url>
          <loc>https://techerignacio.github.io/ScienceWithPython/mod01/ejemplos/</loc>
-         <lastmod>2026-03-10</lastmod>
+         <lastmod>2026-03-23</lastmod>
     </url>
     <url>
          <loc>https://techerignacio.github.io/ScienceWithPython/mod01/ejercicios/</loc>
-         <lastmod>2026-03-10</lastmod>
+         <lastmod>2026-03-23</lastmod>
     </url>
     <url>
          <loc>https://techerignacio.github.io/ScienceWithPython/mod01/extras/</loc>
-         <lastmod>2026-03-10</lastmod>
+         <lastmod>2026-03-23</lastmod>
+    </url>
+    <url>
+         <loc>https://techerignacio.github.io/ScienceWithPython/mod02/</loc>
+         <lastmod>2026-03-23</lastmod>
+    </url>
+    <url>
+         <loc>https://techerignacio.github.io/ScienceWithPython/mod02/ejemplos/</loc>
+         <lastmod>2026-03-23</lastmod>
+    </url>
+    <url>
+         <loc>https://techerignacio.github.io/ScienceWithPython/mod02/ejercicios/</loc>
+         <lastmod>2026-03-23</lastmod>
+    </url>
+    <url>
+         <loc>https://techerignacio.github.io/ScienceWithPython/mod02/extras/</loc>
+         <lastmod>2026-03-23</lastmod>
     </url>
     <url>
          <loc>https://techerignacio.github.io/ScienceWithPython/setup/</loc>
-         <lastmod>2026-03-10</lastmod>
+         <lastmod>2026-03-23</lastmod>
     </url>
 </urlset>

@@ -1,0 +1,1063 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Aprende simulación científica con Python">
+      
+      
+        <meta name="author" content="Tangrama">
+      
+      
+        <link rel="canonical" href="https://techerignacio.github.io/ScienceWithPython/mod02/ejemplos/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../ejercicios/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>🔬 Ejemplos - Ciencia con Python</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/css/custom.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ejemplos-modulo-2examples-module-2" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="Ciencia con Python" class="md-header__button md-logo" aria-label="Ciencia con Python" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Ciencia con Python
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              🔬 Ejemplos
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Inicio
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../setup/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  🔧 Configuración
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../mod01/" class="md-tabs__link">
+          
+  
+  
+  🐍 Módulo 1 · Introducción
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+  🔀 Módulo 2 · Condicionales
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Ciencia con Python" class="md-nav__button md-logo" aria-label="Ciencia con Python" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Ciencia con Python
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔧 Configuración
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🐍 Módulo 1 · Introducción
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🐍 Módulo 1 · Introducción
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mod01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📖 Teoría
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mod01/ejemplos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔬 Ejemplos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mod01/ejercicios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ✏️ Ejercicios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mod01/extras/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🏆 Retos Extra
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔀 Módulo 2 · Condicionales
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🔀 Módulo 2 · Condicionales
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📖 Teoría
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔬 Ejemplos
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔬 Ejemplos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-1-clasificar-la-temperatura-de-un-planetaexample-1-classifying-a-planets-temperature" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo 1 — Clasificar la temperatura de un planetaExample 1 — Classifying a Planet's Temperature
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-2-puede-escapar-la-naveexample-2-can-the-spacecraft-escape" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo 2 — ¿Puede escapar la nave?Example 2 — Can the Spacecraft Escape?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-3-clasificar-gravedad-de-planetasexample-3-classifying-planet-gravity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo 3 — Clasificar gravedad de planetasExample 3 — Classifying Planet Gravity
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-4-agua-liquida-posibleexample-4-liquid-water-possible" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo 4 — ¿Agua líquida posible?Example 4 — Liquid Water Possible?
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ejercicios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ✏️ Ejercicios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../extras/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🏆 Retos Extra
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-1-clasificar-la-temperatura-de-un-planetaexample-1-classifying-a-planets-temperature" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo 1 — Clasificar la temperatura de un planetaExample 1 — Classifying a Planet's Temperature
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-2-puede-escapar-la-naveexample-2-can-the-spacecraft-escape" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo 2 — ¿Puede escapar la nave?Example 2 — Can the Spacecraft Escape?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-3-clasificar-gravedad-de-planetasexample-3-classifying-planet-gravity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo 3 — Clasificar gravedad de planetasExample 3 — Classifying Planet Gravity
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-4-agua-liquida-posibleexample-4-liquid-water-possible" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo 4 — ¿Agua líquida posible?Example 4 — Liquid Water Possible?
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="ejemplos-modulo-2examples-module-2">🔬 <span class="lang-es">Ejemplos — Módulo 2</span><span class="lang-en">Examples — Module 2</span><a class="headerlink" href="#ejemplos-modulo-2examples-module-2" title="Permanent link">&para;</a></h1>
+<div class="lang-es">
+<p>Veamos cómo usar los condicionales para resolver problemas científicos reales.</p>
+</div>
+<div class="lang-en">
+<p>Let's see how to use conditionals to solve real scientific problems.</p>
+</div>
+<hr />
+<h2 id="ejemplo-1-clasificar-la-temperatura-de-un-planetaexample-1-classifying-a-planets-temperature"><span class="lang-es">Ejemplo 1 — Clasificar la temperatura de un planeta</span><span class="lang-en">Example 1 — Classifying a Planet's Temperature</span><a class="headerlink" href="#ejemplo-1-clasificar-la-temperatura-de-un-planetaexample-1-classifying-a-planets-temperature" title="Permanent link">&para;</a></h2>
+<div class="lang-es">
+<p>Según la temperatura superficial, clasificamos un planeta en distintas categorías:</p>
+</div>
+<div class="lang-en">
+<p>Based on the surface temperature, we classify a planet into different categories:</p>
+</div>
+<div class="highlight"><pre><span></span><code><span class="c1"># @browser</span>
+<span class="n">planeta</span> <span class="o">=</span> <span class="s2">&quot;Venus&quot;</span>
+<span class="n">temp_C</span>  <span class="o">=</span> <span class="mi">465</span>  <span class="c1"># temperatura promedio en °C</span>
+
+<span class="k">if</span> <span class="n">temp_C</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">50</span><span class="p">:</span>
+    <span class="n">categoria</span> <span class="o">=</span> <span class="s2">&quot;Helado&quot;</span>
+<span class="k">elif</span> <span class="n">temp_C</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">categoria</span> <span class="o">=</span> <span class="s2">&quot;Frio&quot;</span>
+<span class="k">elif</span> <span class="n">temp_C</span> <span class="o">&lt;</span> <span class="mi">50</span><span class="p">:</span>
+    <span class="n">categoria</span> <span class="o">=</span> <span class="s2">&quot;Templado (habitable)&quot;</span>
+<span class="k">elif</span> <span class="n">temp_C</span> <span class="o">&lt;</span> <span class="mi">200</span><span class="p">:</span>
+    <span class="n">categoria</span> <span class="o">=</span> <span class="s2">&quot;Caliente&quot;</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">categoria</span> <span class="o">=</span> <span class="s2">&quot;Extremadamente caliente&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Planeta:&quot;</span><span class="p">,</span> <span class="n">planeta</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Temperatura:&quot;</span><span class="p">,</span> <span class="n">temp_C</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Categoria:  &quot;</span><span class="p">,</span> <span class="n">categoria</span><span class="p">)</span>
+</code></pre></div>
+<hr />
+<h2 id="ejemplo-2-puede-escapar-la-naveexample-2-can-the-spacecraft-escape"><span class="lang-es">Ejemplo 2 — ¿Puede escapar la nave?</span><span class="lang-en">Example 2 — Can the Spacecraft Escape?</span><a class="headerlink" href="#ejemplo-2-puede-escapar-la-naveexample-2-can-the-spacecraft-escape" title="Permanent link">&para;</a></h2>
+<div class="lang-es">
+<p>Para escapar de un planeta, la nave debe alcanzar la <strong>velocidad de escape</strong>.
+Si no la alcanza, la gravedad la devuelve.</p>
+</div>
+<div class="lang-en">
+<p>To escape a planet, the spacecraft must reach the <strong>escape velocity</strong>.
+If it doesn't, gravity pulls it back.</p>
+</div>
+<div class="highlight"><pre><span></span><code><span class="c1"># @browser</span>
+<span class="n">planeta</span>          <span class="o">=</span> <span class="s2">&quot;Tierra&quot;</span>
+<span class="n">vel_escape_km_s</span>  <span class="o">=</span> <span class="mf">11.2</span>   <span class="c1"># km/s (velocidad de escape de la Tierra)</span>
+<span class="n">vel_nave_km_s</span>    <span class="o">=</span> <span class="mf">9.5</span>    <span class="c1"># km/s (velocidad de nuestra nave)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Nave:&quot;</span><span class="p">,</span> <span class="n">vel_nave_km_s</span><span class="p">,</span> <span class="s2">&quot;km/s&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Escape necesario:&quot;</span><span class="p">,</span> <span class="n">vel_escape_km_s</span><span class="p">,</span> <span class="s2">&quot;km/s&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">vel_nave_km_s</span> <span class="o">&gt;=</span> <span class="n">vel_escape_km_s</span><span class="p">:</span>
+    <span class="n">diferencia</span> <span class="o">=</span> <span class="n">vel_nave_km_s</span> <span class="o">-</span> <span class="n">vel_escape_km_s</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La nave ESCAPA con&quot;</span><span class="p">,</span> <span class="n">diferencia</span><span class="p">,</span> <span class="s2">&quot;km/s de sobra&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">faltante</span> <span class="o">=</span> <span class="n">vel_escape_km_s</span> <span class="o">-</span> <span class="n">vel_nave_km_s</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La nave NO escapa. Le faltan&quot;</span><span class="p">,</span> <span class="n">faltante</span><span class="p">,</span> <span class="s2">&quot;km/s&quot;</span><span class="p">)</span>
+</code></pre></div>
+<hr />
+<h2 id="ejemplo-3-clasificar-gravedad-de-planetasexample-3-classifying-planet-gravity"><span class="lang-es">Ejemplo 3 — Clasificar gravedad de planetas</span><span class="lang-en">Example 3 — Classifying Planet Gravity</span><a class="headerlink" href="#ejemplo-3-clasificar-gravedad-de-planetasexample-3-classifying-planet-gravity" title="Permanent link">&para;</a></h2>
+<div class="lang-es">
+<p>Comparamos la gravedad de un planeta con la de la Tierra (9.8 m/s²) para saber
+si los astronautas se sentirían más pesados o más livianos.</p>
+</div>
+<div class="lang-en">
+<p>We compare a planet's gravity to Earth's (9.8 m/s²) to determine
+whether astronauts would feel heavier or lighter.</p>
+</div>
+<div class="highlight"><pre><span></span><code><span class="c1"># @browser</span>
+<span class="n">g_tierra</span> <span class="o">=</span> <span class="mf">9.8</span>  <span class="c1"># m/s²</span>
+
+<span class="n">planetas</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="s2">&quot;Mercurio&quot;</span><span class="p">,</span> <span class="mf">3.7</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;Venus&quot;</span><span class="p">,</span>    <span class="mf">8.87</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;Marte&quot;</span><span class="p">,</span>    <span class="mf">3.72</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;Jupiter&quot;</span><span class="p">,</span>  <span class="mf">24.79</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;Luna&quot;</span><span class="p">,</span>     <span class="mf">1.62</span><span class="p">),</span>
+<span class="p">]</span>
+
+<span class="k">for</span> <span class="n">nombre</span><span class="p">,</span> <span class="n">g</span> <span class="ow">in</span> <span class="n">planetas</span><span class="p">:</span>
+    <span class="n">ratio</span> <span class="o">=</span> <span class="n">g</span> <span class="o">/</span> <span class="n">g_tierra</span>
+    <span class="k">if</span> <span class="n">ratio</span> <span class="o">&lt;</span> <span class="mf">0.5</span><span class="p">:</span>
+        <span class="n">estado</span> <span class="o">=</span> <span class="s2">&quot;mucho mas liviano&quot;</span>
+    <span class="k">elif</span> <span class="n">ratio</span> <span class="o">&lt;</span> <span class="mf">0.9</span><span class="p">:</span>
+        <span class="n">estado</span> <span class="o">=</span> <span class="s2">&quot;mas liviano&quot;</span>
+    <span class="k">elif</span> <span class="n">ratio</span> <span class="o">&lt;=</span> <span class="mf">1.1</span><span class="p">:</span>
+        <span class="n">estado</span> <span class="o">=</span> <span class="s2">&quot;similar a la Tierra&quot;</span>
+    <span class="k">elif</span> <span class="n">ratio</span> <span class="o">&lt;=</span> <span class="mf">2.0</span><span class="p">:</span>
+        <span class="n">estado</span> <span class="o">=</span> <span class="s2">&quot;mas pesado&quot;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">estado</span> <span class="o">=</span> <span class="s2">&quot;mucho mas pesado&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">nombre</span> <span class="o">+</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">estado</span><span class="p">,</span> <span class="s2">&quot;(&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">g</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; m/s²)&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="admonition note">
+<p><span class="lang-es">Este ejemplo usa una lista y un bucle <code>for</code> — los veremos en detalle en el Módulo 3. Por ahora, observá cómo los condicionales clasifican cada planeta.</span>
+<span class="lang-en">This example uses a list and a <code>for</code> loop — we'll cover those in Module 3. For now, notice how the conditionals classify each planet.</span></p>
+</div>
+<hr />
+<h2 id="ejemplo-4-agua-liquida-posibleexample-4-liquid-water-possible"><span class="lang-es">Ejemplo 4 — ¿Agua líquida posible?</span><span class="lang-en">Example 4 — Liquid Water Possible?</span><a class="headerlink" href="#ejemplo-4-agua-liquida-posibleexample-4-liquid-water-possible" title="Permanent link">&para;</a></h2>
+<div class="lang-es">
+<p>El agua es líquida entre 0°C y 100°C a presión normal.
+A menor presión atmosférica, el punto de ebullición baja.</p>
+</div>
+<div class="lang-en">
+<p>Water is liquid between 0°C and 100°C at normal pressure.
+At lower atmospheric pressure, the boiling point drops.</p>
+</div>
+<div class="highlight"><pre><span></span><code><span class="c1"># @browser</span>
+<span class="n">planeta</span>     <span class="o">=</span> <span class="s2">&quot;Marte&quot;</span>
+<span class="n">temp_C</span>      <span class="o">=</span> <span class="mi">20</span>     <span class="c1"># temperatura en ese momento (°C)</span>
+<span class="n">presion_atm</span> <span class="o">=</span> <span class="mf">0.006</span>  <span class="c1"># presion atmosferica (atm) — Marte tiene muy poca</span>
+
+<span class="c1"># El agua hierve a menos temperatura con poca presion</span>
+<span class="c1"># Regla simplificada: punto de ebullicion ~ 100 * presion_atm^0.3</span>
+<span class="n">punto_ebullicion</span> <span class="o">=</span> <span class="mi">100</span> <span class="o">*</span> <span class="n">presion_atm</span> <span class="o">**</span> <span class="mf">0.3</span>
+
+<span class="k">if</span> <span class="n">temp_C</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">temp_C</span> <span class="o">&lt;</span> <span class="n">punto_ebullicion</span> <span class="ow">and</span> <span class="n">presion_atm</span> <span class="o">&gt;</span> <span class="mf">0.006</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">planeta</span><span class="p">,</span> <span class="s2">&quot;: agua liquida POSIBLE&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Rango valido:&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="n">punto_ebullicion</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">planeta</span><span class="p">,</span> <span class="s2">&quot;: agua liquida NO posible&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">temp_C</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  → Temperatura demasiado baja (se congela)&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">presion_atm</span> <span class="o">&lt;=</span> <span class="mf">0.006</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  → Presion demasiado baja (se evapora)&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">temp_C</span> <span class="o">&gt;=</span> <span class="n">punto_ebullicion</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  → Temperatura demasiado alta (se evapora)&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "content.code.copy", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../assets/js/main.js"></script>
+      
+    
+  </body>
+</html>
