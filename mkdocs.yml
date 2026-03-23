@@ -29,6 +29,11 @@ nav:
     - "🔬 Ejemplos": mod01/ejemplos.md
     - "✏️ Ejercicios": mod01/ejercicios.md
     - "🏆 Retos Extra": mod01/extras.md
+  - "🔀 Módulo 2 · Condicionales":
+    - "📖 Teoría": mod02/index.md
+    - "🔬 Ejemplos": mod02/ejemplos.md
+    - "✏️ Ejercicios": mod02/ejercicios.md
+    - "🏆 Retos Extra": mod02/extras.md
 
 markdown_extensions:
   - admonition

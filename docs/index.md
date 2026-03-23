@@ -63,8 +63,15 @@ No programming knowledge required. We start from scratch!
     <div class="module-card-desc lang-es">Print, variables y operaciones. Tus primeras líneas de código.</div>
     <div class="module-card-desc lang-en">Print, variables, and operations. Your first lines of code.</div>
   </a>
+  <a href="mod02/" class="module-card">
+    <div class="module-card-icon">🔀</div>
+    <div class="module-card-num">MÓDULO 2</div>
+    <div class="module-card-name"><span class="lang-es">Condicionales</span><span class="lang-en">Conditionals</span></div>
+    <div class="module-card-desc lang-es">if, elif, else. Hacé que tu código tome decisiones.</div>
+    <div class="module-card-desc lang-en">if, elif, else. Make your code take decisions.</div>
+  </a>
   <div class="module-card" style="opacity:0.4;pointer-events:none;cursor:default;">
-    <div class="module-card-icon">📐</div>
+    <div class="module-card-icon">🔁</div>
     <div class="module-card-num">PRÓXIMAMENTE</div>
     <div class="module-card-name"><span class="lang-es">Más módulos en camino…</span><span class="lang-en">More modules coming…</span></div>
     <div class="module-card-desc lang-es">El curso se va expandiendo. ¡Volvé pronto!</div>
